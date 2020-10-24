@@ -1,0 +1,3 @@
+/home/jtorreal/CLionProjects/StickyKeys/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jtorreal/CLionProjects/StickyKeys/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jtorreal/CLionProjects/StickyKeys/cmake-build-debug/CMakeFiles/StickyKeys.dir

@@ -1,0 +1,8 @@
+/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jtorreal/CLionProjects/StickyKeys
+-- Found SFML 2.5.1 in /home/jtorreal/SFML-2.5.1-Compiled/lib/cmake/SFML
+-- SFML_INCLUDE_DIR: /home/jtorreal/SFML-2.5.1-Compiled/include
+-- SFML_LIBRARIES: 
+-- SFML_VERSION: 2.5.1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jtorreal/CLionProjects/StickyKeys/cmake-build-debug
