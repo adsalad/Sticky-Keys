@@ -100,16 +100,33 @@ public:
             if(GetKey(olc::Key::LEFT).bHeld && canMoveLeft){
                 playerVelX = -6.0f;
             }
+            if(GetKey(olc::Key::A).bHeld && canMoveLeft){
+                playerVelX = -6.0f;
+            }
             if(GetKey(olc::Key::LEFT).bReleased){
+                playerVelX = 0.0f;
+            }
+            if(GetKey(olc::Key::A).bReleased){
                 playerVelX = 0.0f;
             }
             if(GetKey(olc::Key::RIGHT).bHeld && canMoveRight) {
                 playerVelX = 6.0f;
             }
+            if(GetKey(olc::Key::D).bHeld && canMoveRight) {
+                playerVelX = 6.0f;
+            }
             if(GetKey(olc::Key::RIGHT).bReleased){
                 playerVelX = 0.0f;
             }
+            if(GetKey(olc::Key::D).bReleased){
+                playerVelX = 0.0f;
+            }
             if(GetKey(olc::Key::SPACE).bPressed && canJump) {
+                if(playerVelY == 0){
+                    playerVelY = -12.0f;
+                }
+            }
+            if(GetKey(olc::Key::W).bPressed && canJump) {
                 if(playerVelY == 0){
                     playerVelY = -12.0f;
                 }
