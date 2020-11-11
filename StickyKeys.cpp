@@ -1,38 +1,50 @@
 #define OLC_PGE_APPLICATION
-
 #include "olcPixelGameEngine.h"
+#include <string>
 using namespace std;
 
-
+//Create the actual Game Engine
 class Example : public olc::PixelGameEngine
 {
 public:
-	Example()
-	{
-		sAppName = "Test Engine";
-	}
+    Example()
+    {
+        sAppName = "Sticky Keys Engine";
+    }
 
 private:
     string LevelOne;
-	int nLevelWidth;
-	int nLevelHeight;
+    int nLevelWidth;
+    int nLevelHeight;
 
-	float fPlayerX = 0.0f;
-	float fPlayerY = 0.0f;
+    int coinCounter = 0;
+    int totalcoins = 0;
 
-	float playerVelX = 0.0f;
-	float playerVelY = 0.0f;
+    float fPlayerX = 0.0f;
+    float fPlayerY = 0.0f;
 
-	float mouseX = GetMouseX();
-	float mouseY = GetMouseY();
+    float playerVelX = 0.0f;
+    float playerVelY = 0.0f;
 
-	float cameraX = 0.0f;
-	float cameraY = 0.0f;
+    float mouseX = GetMouseX();
+    float mouseY = GetMouseY();
 
-	bool onGround = false;
-	bool canMoveLeft = true;
-	bool canMoveRight = true;
-	bool canJump = true;
+    float cameraX = 0.0f;
+    float cameraY = 0.0f;
+
+    // Sprite Resources
+    olc::Sprite *spriteTiles = nullptr;
+    olc::Sprite *spriteMan = nullptr;
+    olc::Sprite *spriteCoin = nullptr;
+
+    // Sprite selection flags
+    int nDirModX = 0;
+    int nDirModY = 0;
+
+    bool onGround = false;
+    bool canMoveLeft = true;
+    bool canMoveRight = true;
+    bool canJump = true;
 
     bool leftClicked = false;
     bool leftPlaced = false;
@@ -44,16 +56,17 @@ private:
     bool fixTiles = false;
 
 public:
-	bool OnUserCreate() override
-	{
-		nLevelWidth = 64;
-		nLevelHeight = 16;
+    //Create initial level and load any Sprites needed at this stage
+    bool OnUserCreate() override
+    {
+        nLevelWidth = 64;
+        nLevelHeight = 16;
 
         LevelOne += "................................................................";
         LevelOne += "................................................................";
         LevelOne += "................................................................";
         LevelOne += ".......#####....................................................";
-        LevelOne += "........###.....................................................";
+        LevelOne += "........###..............ooo....................................";
         LevelOne += ".......................########.................................";
         LevelOne += ".....##########.......###..............#.#......................";
         LevelOne += "....................###................#.#......................";
@@ -62,23 +75,30 @@ public:
         LevelOne += "...................................#.#...............###........";
         LevelOne += "........................############.#............###...........";
         LevelOne += "........................#............#.........###..............";
-        LevelOne += "........................#.############......###.................";
-        LevelOne += "........................#................###....................";
+        LevelOne += "........................#.############.....####.................";
+        LevelOne += "........................#................##.....................";
         LevelOne += "........................#################.......................";
 
+        spriteMan = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys2.0/Images/MarioSkidding.png");
+        spriteTiles = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys2.0/Images/tut_tiles.png");
+        spriteCoin = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys2.0/Images/coin.png");
+        for (int i; i<LevelOne.length();i++){
+            if(LevelOne[i]=='o') {
+                totalcoins = totalcoins + 1;
+            }
+        }
+        // Called once at the start, so create things here
+        return true;
+    }
 
-	    // Called once at the start, so create things here
-		return true;
-	}
-
-	bool OnUserUpdate(float fElapsedTime) override
-	{
-	    auto GetTile = [&](int x, int y)
+    bool OnUserUpdate(float fElapsedTime) override
+    {
+        auto GetTile = [&](int x, int y)
         {
-	        if (x >= 0 && x < nLevelWidth && y >= 0 && y < nLevelHeight)
-	            return LevelOne[y * nLevelWidth + x];
-	        else
-	            return ' ';
+            if (x >= 0 && x < nLevelWidth && y >= 0 && y < nLevelHeight)
+                return LevelOne[y * nLevelWidth + x];
+            else
+                return ' ';
         };
 
         auto SetTile = [&](int x, int y, char c)
@@ -87,6 +107,7 @@ public:
                 LevelOne[y * nLevelWidth + x] = c;
         };
 
+        SetPixelMode(olc::Pixel::ALPHA);
         //No longer needed as they are updated between frames
         //playerVelY = 0.0f;
         //playerVelX = 0.0f;
@@ -167,14 +188,32 @@ public:
         if(playerVelY < -100.0f)
             playerVelY = -100.0f;
 
+        if (GetTile(fNewPlayerX + 0.0f, fNewPlayerY + 0.0f) == L'o')
+            SetTile(fNewPlayerX + 0.0f, fNewPlayerY + 0.0f, L'.');
+
+        if (GetTile(fNewPlayerX + 0.0f, fNewPlayerY + 1.0f) == L'o')
+            SetTile(fNewPlayerX + 0.0f, fNewPlayerY + 1.0f, L'.');
+
+        if (GetTile(fNewPlayerX + 1.0f, fNewPlayerY + 0.0f) == L'o')
+            SetTile(fNewPlayerX + 1.0f, fNewPlayerY + 0.0f, L'.');
+
+        if (GetTile(fNewPlayerX + 1.0f, fNewPlayerY + 1.0f) == L'o')
+            SetTile(fNewPlayerX + 1.0f, fNewPlayerY + 1.0f, L'.');
+        int ingameCoins = 0;
+        for (int i = 0; i < LevelOne.length();i++){
+            if(LevelOne[i]=='o') {
+                ingameCoins = ingameCoins+1;
+            }
+        }
+
         //Check Collision
-        if(playerVelX <= 0){
+        if(playerVelX <= 0){ //Moving Left
             if (GetTile(fNewPlayerX + 0.0f, fPlayerY + 0.0f) != '.' || GetTile(fNewPlayerX + 0.0f, fPlayerY + 0.9f) != '.'){
                 fNewPlayerX = (int)fNewPlayerX + 1;
                 playerVelX = 0;
             }
         }
-        else{
+        else{ //Moving Right
             if (GetTile(fNewPlayerX + 1.0f, fPlayerY + 0.0f) != '.' || GetTile(fNewPlayerX + 1.0f, fPlayerY + 0.9f) != '.'){
                 fNewPlayerX = (int)fNewPlayerX;
                 playerVelX = 0;
@@ -199,7 +238,7 @@ public:
         fPlayerX = fNewPlayerX;
         fPlayerY = fNewPlayerY;
 
-
+        //Camera Properties
         cameraX = fPlayerX;
         cameraY = fPlayerY;
 
@@ -223,7 +262,7 @@ public:
         float tileOffsetX = (offsetX - (int)offsetX) * nTileWidth;
         float tileOffsetY = (offsetY - (int) offsetY) * nTileHeight;
 
-        //Draw actual tilemap
+        //Draw actual tile map
         for(int i = -1; i < nVisibleTilesX+1; i++){
             for (int j = -1; j < nVisibleTilesY+1; j++){
                 char tileID = GetTile(i + offsetX, j + offsetY);
@@ -238,14 +277,23 @@ public:
                         FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::BLACK);
                         break;
                     case '#':
-                        FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::RED);
+                        //FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::RED);
+                        DrawPartialSprite(i * nTileWidth - tileOffsetX, j * nTileHeight - tileOffsetY, spriteTiles, nDirModX * nTileWidth, nDirModY * nTileHeight, 2*nTileWidth, 2*nTileHeight);
                         break;
                     case 'l':
                         FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::MAGENTA);
+                        break;
                     case 'r':
                         FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::BLUE);
+                        break;
                     case 'j':
                         FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::CYAN);
+                        break;
+                    case 'o':
+                        DrawPartialSprite(i * nTileWidth - tileOffsetX, j * nTileHeight - tileOffsetY, spriteCoin, nDirModX * nTileWidth, nDirModY * nTileHeight, 2*nTileWidth, 2*nTileHeight);
+                        //DrawSprite(i*nTileWidth-tileOffsetX, j*nTileHeight-tileOffsetY, spriteCoin, 1, olc::Sprite::NONE);
+                        //FillRect( i * nTileWidth-tileOffsetX, j * nTileHeight - tileOffsetY, nTileWidth, nTileHeight, olc::YELLOW);
+                        break;
                     default:
                         break;
                 }
@@ -284,7 +332,6 @@ public:
         if(jumpPlaced == false && jumpClicked == true){
             FillRect(JumpKeyX, JumpKeyY, nTileWidth, nTileHeight, olc::DARK_CYAN);
         }
-
 
         //Check to see if mouse clicks on keyboard key
         if(IsFocused()){
@@ -332,21 +379,26 @@ public:
             }
         }
 
+        //Draw Amount of Coins
+        coinCounter = totalcoins - ingameCoins;
+        string coinString = to_string(coinCounter);
+        DrawString(LeftKeyX-10,LeftKeyY+150,"Coins:"+coinString,olc::YELLOW);
+
         //Draw player
-        FillRect((fPlayerX-offsetX) * nTileWidth, (fPlayerY - offsetY) * nTileHeight, nTileWidth, nTileHeight, olc::GREEN);
-
-
-
-		return true;
-	}
+        DrawPartialSprite((fPlayerX - offsetX) * nTileWidth, (fPlayerY - offsetY) * nTileWidth, spriteMan, nDirModX * nTileWidth, nDirModY * nTileHeight, 1*nTileWidth, 1*nTileHeight);
+        //FillRect((fPlayerX-offsetX) * nTileWidth, (fPlayerY - offsetY) * nTileHeight, nTileWidth, nTileHeight, olc::GREEN);
+        //DrawPartialSprite((fPlayerX - offsetX) * nTileWidth, (fPlayerY - offsetY) * nTileWidth, spriteMan, nDirModX * nTileWidth, nDirModY * nTileHeight, nTileWidth, nTileHeight);
+        SetPixelMode(olc::Pixel::NORMAL);
+        return true;
+    }
 };
 
 
 int main()
 {
-	Example demo;
-	if (demo.Construct(256, 256, 8, 8))
-		demo.Start();
+    Example demo;
+    if (demo.Construct(256, 256, 8, 8))
+        demo.Start();
 
-	return 0;
+    return 0;
 }
