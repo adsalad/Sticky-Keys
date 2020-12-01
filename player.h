@@ -13,10 +13,21 @@ private:
     float yPos;
     float xVelocity;
     float yVelocity;
+    float checkpointX;
+    float checkpointY;
     bool canMoveLeft;
     bool canMoveRight;
     bool canJump;
+    bool onGround;
+    bool isDead;
+    bool facingRight;
+    bool flagPassed;
+    bool atGoal;
     olc::Sprite *playerSprite;
+    olc::Sprite *playerMoveRight;
+    olc::Sprite *playerMoveLeft;
+    olc::Sprite *playerJumpRight;
+    olc::Sprite *playerJumpLeft;
 
 public:
     Player();
@@ -34,6 +45,13 @@ public:
     void setCanJump(bool val);
     void processInput(olc::PixelGameEngine* pge, Level* currentLevel, float fElapsedTime);
     void draw(Level* currentLevel, olc::PixelGameEngine* pge);
+    void setFlag(bool val);
+    bool getFlag();
+    bool getDeathStatus();
+    bool isAtGoal();
+    void setDeathStatus(bool val);
+    void death();
+    void win();
 };
 
 

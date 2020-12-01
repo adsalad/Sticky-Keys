@@ -11,32 +11,15 @@ Level::Level(int lW, int lH, int tW, int tH, std::string fName) {
     levelHeight = lH;
     tileWidth = tW;
     tileHeight = tH;
-    /*std::ifstream file;
+    std::ifstream file;
     std::string line;
     file.open(fName);
     while(std::getline(file, line)){
         levelMap += line;
-    }*/
+    }
 
-    levelMap += "................................................................";
-    levelMap += "................................................................";
-    levelMap += "................................................................";
-    levelMap += ".......#####....................................................";
-    levelMap += "........###..............ooo....................................";
-    levelMap += ".......................########.................................";
-    levelMap += ".....##########.......###..............#.#......................";
-    levelMap += "....................###................#.#......................";
-    levelMap += "...................####.........................................";
-    levelMap += "####################################.##############.....########";
-    levelMap += "...................................#.#...............###........";
-    levelMap += "........................############.#............###...........";
-    levelMap += "........................#............#.........###..............";
-    levelMap += "........................#.############.....####.................";
-    levelMap += "........................#................##.....................";
-    levelMap += "........................#################.......................";
-
-    groundSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys2.0/Images/tut_tiles.png");
-    coinSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys2.0/Images/coin.png");
+    groundSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/tut_tiles.png");
+    coinSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/coin.png");
     fixTiles = false;
 }
 Level::Level(){}
@@ -102,7 +85,6 @@ void Level::draw(float cameraX, float cameraY, olc::PixelGameEngine* pge) {
                     pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::BLACK);
                     break;
                 case '#':
-                    //FillRect(i * nTileWidth-tileOffsetX, j * nTileHeight-tileOffsetY, nTileWidth, nTileHeight, olc::RED);
                     pge->DrawPartialSprite(i * tileWidth - tileOffsetX, j * tileHeight - tileOffsetY, groundSprite, 0 * tileWidth, 0 * tileHeight, 2*tileWidth, 2*tileHeight);
                     break;
                 case 'l':
@@ -114,10 +96,17 @@ void Level::draw(float cameraX, float cameraY, olc::PixelGameEngine* pge) {
                 case 'j':
                     pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::CYAN);
                     break;
-                case 'o':
-                    pge->DrawPartialSprite(i * tileWidth - tileOffsetX, j * tileHeight - tileOffsetY, coinSprite, 0 * tileWidth, 0 * tileHeight, 2*tileWidth, 2*tileHeight);
-                    //DrawSprite(i*nTileWidth-tileOffsetX, j*nTileHeight-tileOffsetY, spriteCoin, 1, olc::Sprite::NONE);
-                    //pge->FillRect( i * tileWidth-tileOffsetX, j * tileHeight - tileOffsetY, tileWidth, tileHeight, olc::YELLOW);
+                case 'f':
+                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::RED);
+                    break;
+                case 'F':
+                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::DARK_RED);
+                    break;
+                case 'd':
+                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::WHITE);
+                    break;
+                case 'g':
+                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::YELLOW);
                     break;
                 default:
                     break;
