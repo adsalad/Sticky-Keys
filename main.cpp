@@ -107,7 +107,7 @@ public:
                     olc::SOUND::PlaySample(recallSound);
                 }
                 if ((GetKey(olc::Key::UP).bPressed) || (GetKey(olc::Key::SPACE).bPressed) ||
-                    (GetKey(olc::Key::W).bPressed)) {
+                    (GetKey(olc::Key::W).bPressed) && !jumpTile.isPlaced()) {
                     olc::SOUND::PlaySample(jumpSound);
                 }
                 if (player.getDeathStatus() || player.isAtGoal()) {

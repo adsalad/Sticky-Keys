@@ -49,23 +49,36 @@ void KeyTile::processInput(float mouseClickX, float mouseClickY, Player* player,
     }
 }
 void KeyTile::draw(olc::PixelGameEngine* pge){
+    olc::Sprite *rightTile;
+    olc::Sprite *leftTile;
+    olc::Sprite *upTile;
+    olc::Sprite *rightClicked;
+    olc::Sprite *leftClicked;
+    olc::Sprite *upClicked;
+    rightTile = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/right.png");
+    leftTile = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/left.png");
+    upTile = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/up.png");
+    rightClicked = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/rightClicked.png");
+    leftClicked = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/leftClicked.png");
+    upClicked = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/upClicked.png");
+
     //Check isPlaced and isClicked to determine where to draw
     if(!placed && !clicked && direction == 'l'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::MAGENTA);
+        pge->DrawSprite(xPos, yPos, leftTile);
     }
     if(!placed && clicked && direction == 'l'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::DARK_MAGENTA);
+        pge->DrawSprite(xPos, yPos, leftClicked);
     }
     if(!placed && !clicked && direction == 'r'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::BLUE);
+        pge->DrawSprite(xPos, yPos, rightTile);
     }
     if(!placed && clicked && direction == 'r'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::DARK_BLUE);
+        pge->DrawSprite(xPos, yPos, rightClicked);
     }
     if(!placed && !clicked && direction == 'j'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::CYAN);
+        pge->DrawSprite(xPos, yPos, upTile);
     }
     if(!placed && clicked && direction == 'j'){
-        pge->FillRect(xPos, yPos, tileWidth, tileHeight, olc::DARK_CYAN);
+        pge->DrawSprite(xPos, yPos, upClicked);
     }
 }

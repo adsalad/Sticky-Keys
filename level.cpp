@@ -4,8 +4,14 @@
 #include "level.h"
 #include <iostream>
 #include <fstream>
-#include "olcPixelGameEngine.h"
 
+/// The main constructor for the Level class
+///
+/// \param lW   the width of the level being created (# number of tiles)
+/// \param lH   the height of the level being created (# number of tiles)
+/// \param tW   the width of each tile (in pixels)
+/// \param tH   the height of each tile (in pixels)
+/// \param fName the name of the text file that contains the text representation of the level
 Level::Level(int lW, int lH, int tW, int tH, std::string fName) {
     levelWidth = lW;
     levelHeight = lH;
@@ -18,12 +24,24 @@ Level::Level(int lW, int lH, int tW, int tH, std::string fName) {
         levelMap += line;
     }
 
-    groundSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/tut_tiles.png");
-    coinSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/coin.png");
+    groundSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/stone.png");
+    checkpointSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/checkpoint.png");
+    checkpointPassedSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/passed.png");
+    finishSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/finish.png");
+    fireSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/fire.png");
+    rightPlacedSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/rightPlaced.png");
+    leftPlacedSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/leftPlaced.png");
+    upPlacedSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/upPlaced.png");
     fixTiles = false;
 }
+/// Default constructor for Level class (does not get used)
 Level::Level(){}
+/// This functions returns the width of the level (in # of tiles)
+/// \return the width of the level (in # of tiles)
 int Level::getLevelWidth() {return levelWidth;}
+
+/// This functions returns the height of the level (in # of tiles)
+/// \return the height of the level (in # of tiles)
 int Level::getLevelHeight() {return levelHeight;}
 int Level::getTileWidth() {return tileWidth;}
 int Level::getTileHeight() {return tileHeight;}
@@ -85,28 +103,28 @@ void Level::draw(float cameraX, float cameraY, olc::PixelGameEngine* pge) {
                     pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::BLACK);
                     break;
                 case '#':
-                    pge->DrawPartialSprite(i * tileWidth - tileOffsetX, j * tileHeight - tileOffsetY, groundSprite, 0 * tileWidth, 0 * tileHeight, 2*tileWidth, 2*tileHeight);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, groundSprite);
                     break;
                 case 'l':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::MAGENTA);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, leftPlacedSprite);
                     break;
                 case 'r':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::BLUE);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, rightPlacedSprite);
                     break;
                 case 'j':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::CYAN);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, upPlacedSprite);
                     break;
                 case 'f':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::RED);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, checkpointSprite);
                     break;
                 case 'F':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::DARK_RED);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, checkpointPassedSprite);
                     break;
                 case 'd':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::WHITE);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, fireSprite);
                     break;
                 case 'g':
-                    pge->FillRect(i * tileWidth-tileOffsetX, j * tileHeight-tileOffsetY, tileWidth, tileHeight, olc::YELLOW);
+                    pge->DrawSprite(i*tileWidth-tileOffsetX, j*tileHeight-tileOffsetY, finishSprite);
                     break;
                 default:
                     break;

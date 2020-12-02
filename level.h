@@ -18,7 +18,13 @@ class Level{
             std::string levelMap;
             std::string fileName;
             olc::Sprite *groundSprite;
-            olc::Sprite *coinSprite;
+            olc::Sprite *checkpointSprite;
+            olc::Sprite *checkpointPassedSprite;
+            olc::Sprite *finishSprite;
+            olc::Sprite *fireSprite;
+            olc::Sprite *rightPlacedSprite;
+            olc::Sprite *leftPlacedSprite;
+            olc::Sprite *upPlacedSprite;
 
     public:
             Level();
