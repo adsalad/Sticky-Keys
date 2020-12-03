@@ -1,0 +1,171 @@
+\hypertarget{classStickyKeys}{}\doxysection{Sticky\+Keys Class Reference}
+\label{classStickyKeys}\index{StickyKeys@{StickyKeys}}
+
+
+This represents the actual engine of the \mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}} game.  
+
+
+
+
+Inheritance diagram for Sticky\+Keys\+:
+% FIG 0
+
+
+Collaboration diagram for Sticky\+Keys\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStickyKeys_a80b95950dbd9096cbaa974085b3a0264}{Sticky\+Keys}} ()
+\item 
+bool \mbox{\hyperlink{classStickyKeys_a049b63f304c247c47687fa73f83cff11}{On\+User\+Create}} () override
+\begin{DoxyCompactList}\small\item\em On\+User\+Create. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStickyKeys_a2643b9c2a0d33b234f2d4d7bc8a1fbea}{On\+User\+Update}} (float f\+Elapsed\+Time) override
+\begin{DoxyCompactList}\small\item\em On\+User\+Update. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStickyKeys_aa0ffac20b25e0ba9b3320392423e0b12}{On\+User\+Destroy}} () override
+\begin{DoxyCompactList}\small\item\em On\+User\+Destroy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStickyKeys_a32125ceec0765ef28982ca4124586c44}\label{classStickyKeys_a32125ceec0765ef28982ca4124586c44}} 
+int {\bfseries level\+Count}
+\item 
+\mbox{\Hypertarget{classStickyKeys_af1cd407f3b12a8f5bb3c0962ca47be55}\label{classStickyKeys_af1cd407f3b12a8f5bb3c0962ca47be55}} 
+\mbox{\hyperlink{classLevel}{Level}} {\bfseries level\+One} = \mbox{\hyperlink{classLevel}{Level}}(64, 16, 16, 16, \char`\"{}/home/jtorreal/C\+Lion\+Projects/\mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}}/Levels/level1.\+txt\char`\"{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_a0d1fc107a278e136166c5b273c0c883d}\label{classStickyKeys_a0d1fc107a278e136166c5b273c0c883d}} 
+\mbox{\hyperlink{classLevel}{Level}} {\bfseries level\+Two} = \mbox{\hyperlink{classLevel}{Level}}(64, 16, 16, 16, \char`\"{}/home/jtorreal/C\+Lion\+Projects/\mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}}/Levels/level2.\+txt\char`\"{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_af1b99144b9fd90e6be19f3b6ca70cd27}\label{classStickyKeys_af1b99144b9fd90e6be19f3b6ca70cd27}} 
+\mbox{\hyperlink{classLevel}{Level}} {\bfseries level\+Three} = \mbox{\hyperlink{classLevel}{Level}}(64, 16, 16, 16, \char`\"{}/home/jtorreal/C\+Lion\+Projects/\mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}}/Levels/level3.\+txt\char`\"{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_a1a3be9d123ea57952fd56c0dd37ebb2e}\label{classStickyKeys_a1a3be9d123ea57952fd56c0dd37ebb2e}} 
+\mbox{\hyperlink{classLevel}{Level}} {\bfseries level\+Four} = \mbox{\hyperlink{classLevel}{Level}}(64, 16, 16, 16, \char`\"{}/home/jtorreal/C\+Lion\+Projects/\mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}}/Levels/level4.\+txt\char`\"{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_ae51e64fea9c25126febf04e7c5003c75}\label{classStickyKeys_ae51e64fea9c25126febf04e7c5003c75}} 
+\mbox{\hyperlink{classLevel}{Level}} {\bfseries level\+Five} = \mbox{\hyperlink{classLevel}{Level}}(64, 16, 16, 16, \char`\"{}/home/jtorreal/C\+Lion\+Projects/\mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}}/Levels/level5.\+txt\char`\"{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_a8620ea31a3621752b7db53fd741edbd9}\label{classStickyKeys_a8620ea31a3621752b7db53fd741edbd9}} 
+std\+::vector$<$ \mbox{\hyperlink{classLevel}{Level}} $>$ {\bfseries level\+List}
+\item 
+\mbox{\Hypertarget{classStickyKeys_a59b94fe5fee95130d145cbb527cde83e}\label{classStickyKeys_a59b94fe5fee95130d145cbb527cde83e}} 
+\mbox{\hyperlink{classLevel}{Level}} $\ast$ {\bfseries current\+Level}
+\item 
+\mbox{\Hypertarget{classStickyKeys_acc2ff2cfd709273ce211a569449c52c2}\label{classStickyKeys_acc2ff2cfd709273ce211a569449c52c2}} 
+\mbox{\hyperlink{classPlayer}{Player}} {\bfseries player} = \mbox{\hyperlink{classPlayer}{Player}}(1, 1, 0, 0)
+\item 
+\mbox{\Hypertarget{classStickyKeys_a41957624c2a1c40d22b3d4f309d831a9}\label{classStickyKeys_a41957624c2a1c40d22b3d4f309d831a9}} 
+\mbox{\hyperlink{classKeyTile}{Key\+Tile}} {\bfseries left\+Tile} = \mbox{\hyperlink{classKeyTile}{Key\+Tile}}(20, 50, \textquotesingle{}l\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_aadd68b3c51913d66b6c3a84c0fb6e03f}\label{classStickyKeys_aadd68b3c51913d66b6c3a84c0fb6e03f}} 
+\mbox{\hyperlink{classKeyTile}{Key\+Tile}} {\bfseries right\+Tile} = \mbox{\hyperlink{classKeyTile}{Key\+Tile}}(left\+Tile.\+get\+X\+Pos()+16+20, 50, \textquotesingle{}r\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_a0ce3d82a929b682fb4389fe82d0d4512}\label{classStickyKeys_a0ce3d82a929b682fb4389fe82d0d4512}} 
+\mbox{\hyperlink{classKeyTile}{Key\+Tile}} {\bfseries jump\+Tile} = \mbox{\hyperlink{classKeyTile}{Key\+Tile}}(right\+Tile.\+get\+X\+Pos()+16+20, 50, \textquotesingle{}j\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classStickyKeys_afe7518266cfbbee047022a8d34a8c8a6}\label{classStickyKeys_afe7518266cfbbee047022a8d34a8c8a6}} 
+std\+::string {\bfseries current\+Map}
+\item 
+\mbox{\Hypertarget{classStickyKeys_a90ccaf1aa455880c1f481c508a6b7aa6}\label{classStickyKeys_a90ccaf1aa455880c1f481c508a6b7aa6}} 
+float {\bfseries cameraX} = 0.\+0f
+\item 
+\mbox{\Hypertarget{classStickyKeys_a5e5266e26ea2bc99690cc896231ab0c5}\label{classStickyKeys_a5e5266e26ea2bc99690cc896231ab0c5}} 
+float {\bfseries cameraY} = 0.\+0f
+\item 
+\mbox{\Hypertarget{classStickyKeys_a22b66c2467a95f34b776afc5cc100079}\label{classStickyKeys_a22b66c2467a95f34b776afc5cc100079}} 
+int {\bfseries jump\+Sound}
+\item 
+\mbox{\Hypertarget{classStickyKeys_a61441386a65f5cea1ed0e76b18b06c65}\label{classStickyKeys_a61441386a65f5cea1ed0e76b18b06c65}} 
+int {\bfseries back\+Sound}
+\item 
+\mbox{\Hypertarget{classStickyKeys_a08d54a4914dcfc0158130e49088b0d48}\label{classStickyKeys_a08d54a4914dcfc0158130e49088b0d48}} 
+int {\bfseries death\+Sound}
+\item 
+\mbox{\Hypertarget{classStickyKeys_add52083799b611072c83a2323303a801}\label{classStickyKeys_add52083799b611072c83a2323303a801}} 
+int {\bfseries place\+Key\+Sound}
+\item 
+\mbox{\Hypertarget{classStickyKeys_ab51ac7214f912c71b7bc34004fbaade8}\label{classStickyKeys_ab51ac7214f912c71b7bc34004fbaade8}} 
+int {\bfseries recall\+Sound}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This represents the actual engine of the \mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}} game. 
+
+\begin{DoxyAuthor}{Authors}
+Jose Torrealba, Cole Chang, Cameron Railton, Adam Salaymeh
+\end{DoxyAuthor}
+This file/class is a representation of the engine to our \mbox{\hyperlink{classStickyKeys}{Sticky\+Keys}} game. It is where the player, key\+Tile and level classes all come together. One player object, five level objects and three key\+Tile objects are all created and continuously updated in this class. The three main functions\+: On\+User\+Create, On\+User\+Update \& On\+User\+Destroy are all inherited from the olc\+Pixel\+Game\+Engine header file and determine what code gets run on initial bootup, continuously throughout the game, and when the window closes, respectively. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStickyKeys_a80b95950dbd9096cbaa974085b3a0264}\label{classStickyKeys_a80b95950dbd9096cbaa974085b3a0264}} 
+\index{StickyKeys@{StickyKeys}!StickyKeys@{StickyKeys}}
+\index{StickyKeys@{StickyKeys}!StickyKeys@{StickyKeys}}
+\doxysubsubsection{\texorpdfstring{StickyKeys()}{StickyKeys()}}
+{\footnotesize\ttfamily Sticky\+Keys\+::\+Sticky\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for our Game\+Engine object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStickyKeys_a049b63f304c247c47687fa73f83cff11}\label{classStickyKeys_a049b63f304c247c47687fa73f83cff11}} 
+\index{StickyKeys@{StickyKeys}!OnUserCreate@{OnUserCreate}}
+\index{OnUserCreate@{OnUserCreate}!StickyKeys@{StickyKeys}}
+\doxysubsubsection{\texorpdfstring{OnUserCreate()}{OnUserCreate()}}
+{\footnotesize\ttfamily bool Sticky\+Keys\+::\+On\+User\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+On\+User\+Create. 
+
+This function runs only once when the window is created. It initializes all of our levels and audio samples to be used later on in the program \begin{DoxyReturn}{Returns}
+true to signify this process has been completed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}}.
+
+\mbox{\Hypertarget{classStickyKeys_aa0ffac20b25e0ba9b3320392423e0b12}\label{classStickyKeys_aa0ffac20b25e0ba9b3320392423e0b12}} 
+\index{StickyKeys@{StickyKeys}!OnUserDestroy@{OnUserDestroy}}
+\index{OnUserDestroy@{OnUserDestroy}!StickyKeys@{StickyKeys}}
+\doxysubsubsection{\texorpdfstring{OnUserDestroy()}{OnUserDestroy()}}
+{\footnotesize\ttfamily bool Sticky\+Keys\+::\+On\+User\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+On\+User\+Destroy. 
+
+Called once when the window/application is terminated. Allows for any open instances of code such as Audio to be properly shut down \begin{DoxyReturn}{Returns}
+true to signify this process has been completed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}}.
+
+\mbox{\Hypertarget{classStickyKeys_a2643b9c2a0d33b234f2d4d7bc8a1fbea}\label{classStickyKeys_a2643b9c2a0d33b234f2d4d7bc8a1fbea}} 
+\index{StickyKeys@{StickyKeys}!OnUserUpdate@{OnUserUpdate}}
+\index{OnUserUpdate@{OnUserUpdate}!StickyKeys@{StickyKeys}}
+\doxysubsubsection{\texorpdfstring{OnUserUpdate()}{OnUserUpdate()}}
+{\footnotesize\ttfamily bool Sticky\+Keys\+::\+On\+User\+Update (\begin{DoxyParamCaption}\item[{float}]{f\+Elapsed\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+On\+User\+Update. 
+
+Called every frame and deals with all processes that require updating every frame or continuous checks such as drawing the player, processing user input, drawing the level and key\+Tiles, etc. 
+\begin{DoxyParams}{Parameters}
+{\em f\+Elapsed\+Time} & f\+Elapsed\+Time a time per frame value meant to be included in certain operations to allow equal performance on all machines \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true to signify this process has been completed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+cpp\end{DoxyCompactItemize}

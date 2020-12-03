@@ -1,6 +1,8 @@
 /**
+ * @class StickyKeys
  * @authors Jose Torrealba, Cole Chang, Cameron Railton, Adam Salaymeh
- * @brief This file/class is a representation of the engine to our StickyKeys game. It is where the player, keyTile and level classes all come together.
+ * @brief This represents the actual engine of the StickyKeys game
+ * @details This file/class is a representation of the engine to our StickyKeys game. It is where the player, keyTile and level classes all come together.
  * One player object, five level objects and three keyTile objects are all created and continuously updated in this class. The three main functions:
  * OnUserCreate, OnUserUpdate & OnUserDestroy are all inherited from the olcPixelGameEngine header file and determine what code gets run on initial
  * bootup, continuously throughout the game, and when the window closes, respectively.
@@ -54,7 +56,8 @@ private:
 
 public:
     /**
-     * This function runs only once when the window is created. It initializes all of our levels and audio samples to be used later on in the program
+     * @brief OnUserCreate
+     * @details This function runs only once when the window is created. It initializes all of our levels and audio samples to be used later on in the program
      * @return true to signify this process has been completed
      */
     bool OnUserCreate() override
@@ -84,7 +87,8 @@ public:
     }
 
     /**
-     * Called every frame and deals with all processes that require updating every frame or continuous checks such as drawing the player, processing user input, drawing the level and keyTiles, etc.
+     * @brief OnUserUpdate
+     * @details Called every frame and deals with all processes that require updating every frame or continuous checks such as drawing the player, processing user input, drawing the level and keyTiles, etc.
      * @param fElapsedTime fElapsedTime a time per frame value meant to be included in certain operations to allow equal performance on all machines
      * @return true to signify this process has been completed
      */
@@ -185,7 +189,8 @@ public:
     }
 
     /**
-     * Called once when the window/application is terminated. Allows for any open instances of code such as Audio to be properly shut down
+     * @brief OnUserDestroy
+     * @details Called once when the window/application is terminated. Allows for any open instances of code such as Audio to be properly shut down
      * @return true to signify this process has been completed
      */
     bool OnUserDestroy() override
@@ -196,7 +201,8 @@ public:
 };
 
 /**
- * The main function where we create and run our game engine object
+ * @brief main
+ * @details The main function where we create and run our game engine object
  * @return 0 to signify that our game has created and ran properly
  */
 int main()

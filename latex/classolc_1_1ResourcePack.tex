@@ -1,0 +1,56 @@
+\hypertarget{classolc_1_1ResourcePack}{}\doxysection{olc\+::Resource\+Pack Class Reference}
+\label{classolc_1_1ResourcePack}\index{olc::ResourcePack@{olc::ResourcePack}}
+
+
+Inheritance diagram for olc\+::Resource\+Pack\+:
+% FIG 0
+
+
+Collaboration diagram for olc\+::Resource\+Pack\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structolc_1_1ResourcePack_1_1sResourceFile}{s\+Resource\+File}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a56eebc321c66215d15df1390b1080c66}\label{classolc_1_1ResourcePack_a56eebc321c66215d15df1390b1080c66}} 
+bool {\bfseries Add\+File} (const std\+::string \&s\+File)
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a3168eef974448f8119e93af97272df27}\label{classolc_1_1ResourcePack_a3168eef974448f8119e93af97272df27}} 
+bool {\bfseries Load\+Pack} (const std\+::string \&s\+File, const std\+::string \&s\+Key)
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_af6b1fec791c3c85b51b565db63a1aa9a}\label{classolc_1_1ResourcePack_af6b1fec791c3c85b51b565db63a1aa9a}} 
+bool {\bfseries Save\+Pack} (const std\+::string \&s\+File, const std\+::string \&s\+Key)
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_accb89668e145dc59e0740925b1b91987}\label{classolc_1_1ResourcePack_accb89668e145dc59e0740925b1b91987}} 
+\mbox{\hyperlink{structolc_1_1ResourceBuffer}{Resource\+Buffer}} {\bfseries Get\+File\+Buffer} (const std\+::string \&s\+File)
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a4421c33c022ad042d29ef81f29f5b355}\label{classolc_1_1ResourcePack_a4421c33c022ad042d29ef81f29f5b355}} 
+bool {\bfseries Loaded} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a32f7db39e12b68a89c7269aa5f1a72d2}\label{classolc_1_1ResourcePack_a32f7db39e12b68a89c7269aa5f1a72d2}} 
+std\+::vector$<$ char $>$ {\bfseries scramble} (const std\+::vector$<$ char $>$ \&data, const std\+::string \&key)
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a7ac73e3e7235fd999864e25220c291f9}\label{classolc_1_1ResourcePack_a7ac73e3e7235fd999864e25220c291f9}} 
+std\+::string {\bfseries makeposix} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_a79fbfb9b26fa5d68ce4d467ea23b7ec0}\label{classolc_1_1ResourcePack_a79fbfb9b26fa5d68ce4d467ea23b7ec0}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structolc_1_1ResourcePack_1_1sResourceFile}{s\+Resource\+File}} $>$ {\bfseries map\+Files}
+\item 
+\mbox{\Hypertarget{classolc_1_1ResourcePack_ac79116b2e4f647b0a11c53db4a6e17f1}\label{classolc_1_1ResourcePack_ac79116b2e4f647b0a11c53db4a6e17f1}} 
+std\+::ifstream {\bfseries base\+File}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+olc\+Pixel\+Game\+Engine.\+h\end{DoxyCompactItemize}

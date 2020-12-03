@@ -1,0 +1,227 @@
+\hypertarget{classKeyTile}{}\doxysection{Key\+Tile Class Reference}
+\label{classKeyTile}\index{KeyTile@{KeyTile}}
+
+
+This class represents the \mbox{\hyperlink{classKeyTile}{Key\+Tile}} object.  
+
+
+
+
+{\ttfamily \#include $<$key\+Tile.\+h$>$}
+
+
+
+Collaboration diagram for Key\+Tile\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKeyTile_a6da76f91c5b8071bc7459cf2018c6b36}\label{classKeyTile_a6da76f91c5b8071bc7459cf2018c6b36}} 
+\mbox{\hyperlink{classKeyTile_a6da76f91c5b8071bc7459cf2018c6b36}{Key\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classKeyTile}{Key\+Tile}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKeyTile_a93e84cb1f933fae977247abcd5cf421e}{Key\+Tile}} (int xP, int yP, char direction)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classKeyTile}{Key\+Tile}} Constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKeyTile_afe1b6e327577fbaa72c4c1f102a16115}{get\+X\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em get\+X\+Pos \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKeyTile_aaf6489053a124c2f53b70daab7b51550}{get\+Y\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em get\+Y\+Pos \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKeyTile_a982675084ecdad0ffadf2c2125e56f18}{is\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em is\+Clicked \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKeyTile_a508548b134c2118bf24072519fa5ccfe}{is\+Placed}} ()
+\begin{DoxyCompactList}\small\item\em is\+Placed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKeyTile_a8488b820434c8e62ce40fc5edb14293b}{set\+Is\+Clicked}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Is\+Clicked \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKeyTile_a10370498d741b0ad66c6ded7379b46ab}{set\+Is\+Placed}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Is\+Placed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKeyTile_a23d7599606aa041a3b0090d6e27e8b79}{process\+Input}} (float mouseX, float mouseY, \mbox{\hyperlink{classPlayer}{Player}} $\ast$player, \mbox{\hyperlink{classLevel}{Level}} $\ast$current\+Level, float offsetX, float offsetY)
+\begin{DoxyCompactList}\small\item\em process\+Input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKeyTile_a0c37e84ab2f0748ff4165be743f02030}{draw}} (\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$pge)
+\begin{DoxyCompactList}\small\item\em draw \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKeyTile_aa64343ef1cde0bb19d131a663e822083}\label{classKeyTile_aa64343ef1cde0bb19d131a663e822083}} 
+int {\bfseries x\+Pos}
+\item 
+\mbox{\Hypertarget{classKeyTile_a133eb6c74e9b00e344461b4ccf42d792}\label{classKeyTile_a133eb6c74e9b00e344461b4ccf42d792}} 
+int {\bfseries y\+Pos}
+\item 
+\mbox{\Hypertarget{classKeyTile_a7f4d82a13dcc91b75f9b0fa9da248f5c}\label{classKeyTile_a7f4d82a13dcc91b75f9b0fa9da248f5c}} 
+char {\bfseries direction}
+\item 
+\mbox{\Hypertarget{classKeyTile_a26247238b331ebc68c5d8ed5627fd63d}\label{classKeyTile_a26247238b331ebc68c5d8ed5627fd63d}} 
+int {\bfseries tile\+Width}
+\item 
+\mbox{\Hypertarget{classKeyTile_a90e31f1bf891d754fc56a9b84003b003}\label{classKeyTile_a90e31f1bf891d754fc56a9b84003b003}} 
+int {\bfseries tile\+Height}
+\item 
+\mbox{\Hypertarget{classKeyTile_ae3d129b3a708c397db7b2453c7343d42}\label{classKeyTile_ae3d129b3a708c397db7b2453c7343d42}} 
+bool {\bfseries clicked}
+\item 
+\mbox{\Hypertarget{classKeyTile_a122203ba863c596a0de9272554db6d7c}\label{classKeyTile_a122203ba863c596a0de9272554db6d7c}} 
+bool {\bfseries placed}
+\item 
+\mbox{\Hypertarget{classKeyTile_a4eb508ecd5684df8c611d6f4a588fb8b}\label{classKeyTile_a4eb508ecd5684df8c611d6f4a588fb8b}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries sprite\+Entity}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the \mbox{\hyperlink{classKeyTile}{Key\+Tile}} object. 
+
+\begin{DoxyAuthor}{Author}
+Jose Torrealba
+\end{DoxyAuthor}
+This class represents the \mbox{\hyperlink{classKeyTile}{Key\+Tile}} object. In our game, these are the three tiles you see hovering in the top left view of your screen. Each of these tiles represent a particular direction/movement option for the player. While in their default position, the player can move freely around the game. However, if an extra platform is needed for a puzzle, the user can click on these key\+Tile platforms and place them into the game world, thus being able to use them for extra mobility. However, this now locks the corresponding movement option for the player. This class contains the implementation of said concept below. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKeyTile_a93e84cb1f933fae977247abcd5cf421e}\label{classKeyTile_a93e84cb1f933fae977247abcd5cf421e}} 
+\index{KeyTile@{KeyTile}!KeyTile@{KeyTile}}
+\index{KeyTile@{KeyTile}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{KeyTile()}{KeyTile()}}
+{\footnotesize\ttfamily Key\+Tile\+::\+Key\+Tile (\begin{DoxyParamCaption}\item[{int}]{xP,  }\item[{int}]{yP,  }\item[{char}]{direction }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classKeyTile}{Key\+Tile}} Constructor. 
+
+Constructor for \mbox{\hyperlink{classKeyTile}{Key\+Tile}} object with parameters for key instance variables 
+\begin{DoxyParams}{Parameters}
+{\em xP} & x position of this key\+Tile object \\
+\hline
+{\em yP} & y position of this key\+Tile object \\
+\hline
+{\em direction} & character representing movement this key\+Tile is associated with (\textquotesingle{}l\textquotesingle{} for left, \textquotesingle{}r\textquotesingle{} for right and \textquotesingle{}j\textquotesingle{} for jump) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKeyTile_a0c37e84ab2f0748ff4165be743f02030}\label{classKeyTile_a0c37e84ab2f0748ff4165be743f02030}} 
+\index{KeyTile@{KeyTile}!draw@{draw}}
+\index{draw@{draw}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Key\+Tile\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$}]{pge }\end{DoxyParamCaption})}
+
+
+
+draw 
+
+Function to draw this key\+Tile object 
+\begin{DoxyParams}{Parameters}
+{\em pge} & a pointer to the current Pixel\+Game\+Engine object that allows us to call window-\/related drawing methods \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKeyTile_afe1b6e327577fbaa72c4c1f102a16115}\label{classKeyTile_afe1b6e327577fbaa72c4c1f102a16115}} 
+\index{KeyTile@{KeyTile}!getXPos@{getXPos}}
+\index{getXPos@{getXPos}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{getXPos()}{getXPos()}}
+{\footnotesize\ttfamily int Key\+Tile\+::get\+X\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+X\+Pos 
+
+Function that returns the default x position of this key\+Tile object \begin{DoxyReturn}{Returns}
+the x position of this key\+Tile object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKeyTile_aaf6489053a124c2f53b70daab7b51550}\label{classKeyTile_aaf6489053a124c2f53b70daab7b51550}} 
+\index{KeyTile@{KeyTile}!getYPos@{getYPos}}
+\index{getYPos@{getYPos}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{getYPos()}{getYPos()}}
+{\footnotesize\ttfamily int Key\+Tile\+::get\+Y\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Y\+Pos 
+
+Function that returns the default y position of this key\+Tile object \begin{DoxyReturn}{Returns}
+the y position of this key\+Tile object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKeyTile_a982675084ecdad0ffadf2c2125e56f18}\label{classKeyTile_a982675084ecdad0ffadf2c2125e56f18}} 
+\index{KeyTile@{KeyTile}!isClicked@{isClicked}}
+\index{isClicked@{isClicked}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{isClicked()}{isClicked()}}
+{\footnotesize\ttfamily bool Key\+Tile\+::is\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Clicked 
+
+Function that checks if this key\+Tile object has been clicked \begin{DoxyReturn}{Returns}
+boolean that represents whether this key\+Tile has been clicked 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKeyTile_a508548b134c2118bf24072519fa5ccfe}\label{classKeyTile_a508548b134c2118bf24072519fa5ccfe}} 
+\index{KeyTile@{KeyTile}!isPlaced@{isPlaced}}
+\index{isPlaced@{isPlaced}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{isPlaced()}{isPlaced()}}
+{\footnotesize\ttfamily bool Key\+Tile\+::is\+Placed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Placed 
+
+Function that checks if this key\+Tile object has been placed \begin{DoxyReturn}{Returns}
+boolean that represents whether this key\+Tile has been placed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKeyTile_a23d7599606aa041a3b0090d6e27e8b79}\label{classKeyTile_a23d7599606aa041a3b0090d6e27e8b79}} 
+\index{KeyTile@{KeyTile}!processInput@{processInput}}
+\index{processInput@{processInput}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void Key\+Tile\+::process\+Input (\begin{DoxyParamCaption}\item[{float}]{mouseX,  }\item[{float}]{mouseY,  }\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{classLevel}{Level}} $\ast$}]{current\+Level,  }\item[{float}]{offsetX,  }\item[{float}]{offsetY }\end{DoxyParamCaption})}
+
+
+
+process\+Input 
+
+Function that processes the user mouse input to determine whether this key\+Tile has been clicked, placed or is still at its default location 
+\begin{DoxyParams}{Parameters}
+{\em mouseX} & the x position of the mouse after a click has been registered \\
+\hline
+{\em mouseY} & the y position of the mouse after a click has been registered \\
+\hline
+{\em player} & reference to the player object (to be able to modify the player can\+Move boolean values) \\
+\hline
+{\em current\+Level} & reference to the current level to be able to set tiles if needed \\
+\hline
+{\em offsetX} & the horizontal offset in reference to the player \\
+\hline
+{\em offsetY} & the vertical offset in reference to the player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKeyTile_a8488b820434c8e62ce40fc5edb14293b}\label{classKeyTile_a8488b820434c8e62ce40fc5edb14293b}} 
+\index{KeyTile@{KeyTile}!setIsClicked@{setIsClicked}}
+\index{setIsClicked@{setIsClicked}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{setIsClicked()}{setIsClicked()}}
+{\footnotesize\ttfamily void Key\+Tile\+::set\+Is\+Clicked (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Is\+Clicked 
+
+Function that sets the is\+Clicked boolean of this key\+Tile object to the specified boolean 
+\begin{DoxyParams}{Parameters}
+{\em val} & the boolean value to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKeyTile_a10370498d741b0ad66c6ded7379b46ab}\label{classKeyTile_a10370498d741b0ad66c6ded7379b46ab}} 
+\index{KeyTile@{KeyTile}!setIsPlaced@{setIsPlaced}}
+\index{setIsPlaced@{setIsPlaced}!KeyTile@{KeyTile}}
+\doxysubsubsection{\texorpdfstring{setIsPlaced()}{setIsPlaced()}}
+{\footnotesize\ttfamily void Key\+Tile\+::set\+Is\+Placed (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Is\+Placed 
+
+Function that sets the is\+Placed value of this key\+Tile object to the specified boolean 
+\begin{DoxyParams}{Parameters}
+{\em val} & the boolean value to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+key\+Tile.\+h\item 
+key\+Tile.\+cpp\end{DoxyCompactItemize}

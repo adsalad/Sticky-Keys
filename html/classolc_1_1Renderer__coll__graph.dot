@@ -1,0 +1,24 @@
+digraph "olc::Renderer"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="olc::Renderer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptrPGE" ,fontname="Helvetica"];
+  Node2 [label="olc::PixelGameEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classolc_1_1PixelGameEngine.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fontDecal" ,fontname="Helvetica"];
+  Node3 [label="olc::Decal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classolc_1_1Decal.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sprite" ,fontname="Helvetica"];
+  Node4 [label="olc::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classolc_1_1Sprite.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pColData" ,fontname="Helvetica"];
+  Node5 [label="olc::Pixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structolc_1_1Pixel.html",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vUVScale" ,fontname="Helvetica"];
+  Node6 [label="olc::v2d_generic\< float \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structolc_1_1v2d__generic.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pMouseState\npKeyboardState" ,fontname="Helvetica"];
+  Node7 [label="olc::HWButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structolc_1_1HWButton.html",tooltip=" "];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vMousePosCache\nvPixelSize\nvMouseWindowPos\nvViewSize\nvMousePos\nvViewPos\nvWindowSize\nvScreenPixelSize\nvScreenSize" ,fontname="Helvetica"];
+  Node8 [label="olc::v2d_generic\< int32_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structolc_1_1v2d__generic.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fontSprite\npDefaultDrawTarget\npDrawTarget" ,fontname="Helvetica"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vPixel\nvInvScreenSize" ,fontname="Helvetica"];
+}

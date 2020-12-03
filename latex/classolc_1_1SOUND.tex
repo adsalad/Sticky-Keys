@@ -1,0 +1,137 @@
+\hypertarget{classolc_1_1SOUND}{}\doxysection{olc\+::S\+O\+U\+ND Class Reference}
+\label{classolc_1_1SOUND}\index{olc::SOUND@{olc::SOUND}}
+
+
+Inheritance diagram for olc\+::S\+O\+U\+ND\+:
+% FIG 0
+
+
+Collaboration diagram for olc\+::S\+O\+U\+ND\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classolc_1_1SOUND_1_1AudioSample}{Audio\+Sample}}
+\item 
+struct \mbox{\hyperlink{structolc_1_1SOUND_1_1sCurrentlyPlayingSample}{s\+Currently\+Playing\+Sample}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a0d77940fd3b349a136228a906957b1ea}\label{classolc_1_1SOUND_a0d77940fd3b349a136228a906957b1ea}} 
+static bool {\bfseries Initialise\+Audio} (unsigned int n\+Sample\+Rate=44100, unsigned int n\+Channels=1, unsigned int n\+Blocks=8, unsigned int n\+Block\+Samples=512)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a4be0f958c4a7c6cb9f01beb9369b956d}\label{classolc_1_1SOUND_a4be0f958c4a7c6cb9f01beb9369b956d}} 
+static bool {\bfseries Destroy\+Audio} ()
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a11f4870cb3bc4e7e9341b6337dc7f91b}\label{classolc_1_1SOUND_a11f4870cb3bc4e7e9341b6337dc7f91b}} 
+static void {\bfseries Set\+User\+Synth\+Function} (std\+::function$<$ float(int, float, float)$>$ func)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ae38a33bc64dd3051d4fbc2bf0e99d59e}\label{classolc_1_1SOUND_ae38a33bc64dd3051d4fbc2bf0e99d59e}} 
+static void {\bfseries Set\+User\+Filter\+Function} (std\+::function$<$ float(int, float, float)$>$ func)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a5859d133bd4a0ba34fe3e8dc37843018}\label{classolc_1_1SOUND_a5859d133bd4a0ba34fe3e8dc37843018}} 
+static int {\bfseries Load\+Audio\+Sample} (std\+::string s\+Wav\+File, \mbox{\hyperlink{classolc_1_1ResourcePack}{olc\+::\+Resource\+Pack}} $\ast$pack=nullptr)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a26d8e7dc1cd95a41a508f6939f3b2f0e}\label{classolc_1_1SOUND_a26d8e7dc1cd95a41a508f6939f3b2f0e}} 
+static void {\bfseries Play\+Sample} (int id, bool b\+Loop=false)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a25c12f42f9104dd2474bd768aec23d09}\label{classolc_1_1SOUND_a25c12f42f9104dd2474bd768aec23d09}} 
+static void {\bfseries Stop\+Sample} (int id)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_aafd2f454e7ff564d817ba5b98cc88177}\label{classolc_1_1SOUND_aafd2f454e7ff564d817ba5b98cc88177}} 
+static void {\bfseries Stop\+All} ()
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_aced87d95913c72115d50725572a53dd8}\label{classolc_1_1SOUND_aced87d95913c72115d50725572a53dd8}} 
+static float {\bfseries Get\+Mixer\+Output} (int n\+Channel, float f\+Global\+Time, float f\+Time\+Step)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a5e64a14ec6c5f7ad90c4747836ebad32}\label{classolc_1_1SOUND_a5e64a14ec6c5f7ad90c4747836ebad32}} 
+static std\+::list$<$ \mbox{\hyperlink{structolc_1_1SOUND_1_1sCurrentlyPlayingSample}{s\+Currently\+Playing\+Sample}} $>$ {\bfseries list\+Active\+Samples}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a1fe64868c497f4b4e33e0d630fe8faae}\label{classolc_1_1SOUND_a1fe64868c497f4b4e33e0d630fe8faae}} 
+static void C\+A\+L\+L\+B\+A\+CK {\bfseries wave\+Out\+Proc} (H\+W\+A\+V\+E\+O\+UT h\+Wave\+Out, U\+I\+NT u\+Msg, D\+W\+O\+RD dw\+Param1, D\+W\+O\+RD dw\+Param2)
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a2bd5898259c2b5dffca6d4eccdb6430d}\label{classolc_1_1SOUND_a2bd5898259c2b5dffca6d4eccdb6430d}} 
+static void {\bfseries Audio\+Thread} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a3d7f5ecf1fb9e2d7832ddea836118ead}\label{classolc_1_1SOUND_a3d7f5ecf1fb9e2d7832ddea836118ead}} 
+static unsigned int {\bfseries m\+\_\+n\+Sample\+Rate} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a2fef33b816d4d2d7383621e6b1aaf74c}\label{classolc_1_1SOUND_a2fef33b816d4d2d7383621e6b1aaf74c}} 
+static unsigned int {\bfseries m\+\_\+n\+Channels} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a4ab23f92a3e1c77c834c5da6a3285cc6}\label{classolc_1_1SOUND_a4ab23f92a3e1c77c834c5da6a3285cc6}} 
+static unsigned int {\bfseries m\+\_\+n\+Block\+Count} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a02074290c446949d4eb416a39c263c6f}\label{classolc_1_1SOUND_a02074290c446949d4eb416a39c263c6f}} 
+static unsigned int {\bfseries m\+\_\+n\+Block\+Samples} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ab5675a0304eda79545c920896b9288ed}\label{classolc_1_1SOUND_ab5675a0304eda79545c920896b9288ed}} 
+static unsigned int {\bfseries m\+\_\+n\+Block\+Current} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a82f03c93a9e37dae9c00b76168410c0c}\label{classolc_1_1SOUND_a82f03c93a9e37dae9c00b76168410c0c}} 
+static short $\ast$ {\bfseries m\+\_\+p\+Block\+Memory} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ad4f7e443cf33d9f7fdfa074e5717266a}\label{classolc_1_1SOUND_ad4f7e443cf33d9f7fdfa074e5717266a}} 
+static W\+A\+V\+E\+H\+DR $\ast$ {\bfseries m\+\_\+p\+Wave\+Headers} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ad6ea323babc11b99a486b4110ffefaa7}\label{classolc_1_1SOUND_ad6ea323babc11b99a486b4110ffefaa7}} 
+static H\+W\+A\+V\+E\+O\+UT {\bfseries m\+\_\+hw\+Device}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ab3d7da113098d08725b1f0a0e54bc635}\label{classolc_1_1SOUND_ab3d7da113098d08725b1f0a0e54bc635}} 
+static std\+::atomic$<$ unsigned int $>$ {\bfseries m\+\_\+n\+Block\+Free} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_aafdf87f72dfca2f312bef484563981a6}\label{classolc_1_1SOUND_aafdf87f72dfca2f312bef484563981a6}} 
+static std\+::condition\+\_\+variable {\bfseries m\+\_\+cv\+Block\+Not\+Zero}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a4a9a39b3d5e9dbb9b38f9ab41100d594}\label{classolc_1_1SOUND_a4a9a39b3d5e9dbb9b38f9ab41100d594}} 
+static std\+::mutex {\bfseries m\+\_\+mux\+Block\+Not\+Zero}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a2d56fd83bdeb28f2da123c4a0c0aba40}\label{classolc_1_1SOUND_a2d56fd83bdeb28f2da123c4a0c0aba40}} 
+static snd\+\_\+pcm\+\_\+t $\ast$ {\bfseries m\+\_\+p\+P\+CM} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_ae4ffc588c104abe0a6ffe4a5882c301a}\label{classolc_1_1SOUND_ae4ffc588c104abe0a6ffe4a5882c301a}} 
+static std\+::queue$<$ A\+Luint $>$ {\bfseries m\+\_\+q\+Available\+Buffers}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a6cede6c9a77bbc5b1039026d6df8fc38}\label{classolc_1_1SOUND_a6cede6c9a77bbc5b1039026d6df8fc38}} 
+static A\+Luint $\ast$ {\bfseries m\+\_\+p\+Buffers} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a3051dea3bf7662c4b3dbb54046ef9031}\label{classolc_1_1SOUND_a3051dea3bf7662c4b3dbb54046ef9031}} 
+static A\+Luint {\bfseries m\+\_\+n\+Source} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a63006c5cfd6447baf1a910f24641b2a5}\label{classolc_1_1SOUND_a63006c5cfd6447baf1a910f24641b2a5}} 
+static A\+L\+Cdevice $\ast$ {\bfseries m\+\_\+p\+Device} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a4c449df7b68e30a7565b74ef1a4b964f}\label{classolc_1_1SOUND_a4c449df7b68e30a7565b74ef1a4b964f}} 
+static A\+L\+Ccontext $\ast$ {\bfseries m\+\_\+p\+Context} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a205e94a54bdb5b5df7067cc986eac746}\label{classolc_1_1SOUND_a205e94a54bdb5b5df7067cc986eac746}} 
+static std\+::thread {\bfseries m\+\_\+\+Audio\+Thread}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_af6a2b0b2f67e3b0625efb1cd733c97c9}\label{classolc_1_1SOUND_af6a2b0b2f67e3b0625efb1cd733c97c9}} 
+static std\+::atomic$<$ bool $>$ {\bfseries m\+\_\+b\+Audio\+Thread\+Active} \{ false \}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a2d150cfde137a2d8fb1d6e8e9a496d3a}\label{classolc_1_1SOUND_a2d150cfde137a2d8fb1d6e8e9a496d3a}} 
+static std\+::atomic$<$ float $>$ {\bfseries m\+\_\+f\+Global\+Time} \{ 0.\+0f \}
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a2ce13f02fcfcad5909cdc2af2a460f49}\label{classolc_1_1SOUND_a2ce13f02fcfcad5909cdc2af2a460f49}} 
+static std\+::function$<$ float(int, float, float)$>$ {\bfseries func\+User\+Synth} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1SOUND_a3f8eb74b2de0fe8d5f7ad2fdb3497aa8}\label{classolc_1_1SOUND_a3f8eb74b2de0fe8d5f7ad2fdb3497aa8}} 
+static std\+::function$<$ float(int, float, float)$>$ {\bfseries func\+User\+Filter} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+olc\+P\+G\+E\+X\+\_\+\+Sound.\+h\end{DoxyCompactItemize}

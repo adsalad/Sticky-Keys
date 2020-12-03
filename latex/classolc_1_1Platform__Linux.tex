@@ -1,0 +1,67 @@
+\hypertarget{classolc_1_1Platform__Linux}{}\doxysection{olc\+::Platform\+\_\+\+Linux Class Reference}
+\label{classolc_1_1Platform__Linux}\index{olc::Platform\_Linux@{olc::Platform\_Linux}}
+
+
+Inheritance diagram for olc\+::Platform\+\_\+\+Linux\+:
+% FIG 0
+
+
+Collaboration diagram for olc\+::Platform\+\_\+\+Linux\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_af7372180f882cb1131e1c69a7dd292ef}\label{classolc_1_1Platform__Linux_af7372180f882cb1131e1c69a7dd292ef}} 
+virtual olc\+::rcode {\bfseries Application\+Start\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a94017020d5f26ceec8caa13595f5e8a5}\label{classolc_1_1Platform__Linux_a94017020d5f26ceec8caa13595f5e8a5}} 
+virtual olc\+::rcode {\bfseries Application\+Clean\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a83606edc4716aad09a22de4f2e0e8a72}\label{classolc_1_1Platform__Linux_a83606edc4716aad09a22de4f2e0e8a72}} 
+virtual olc\+::rcode {\bfseries Thread\+Start\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_aa8c9967a2e031f5410f8ac753cc0adff}\label{classolc_1_1Platform__Linux_aa8c9967a2e031f5410f8ac753cc0adff}} 
+virtual olc\+::rcode {\bfseries Thread\+Clean\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_adf411afef44cea1d2010cead760e3f13}\label{classolc_1_1Platform__Linux_adf411afef44cea1d2010cead760e3f13}} 
+virtual olc\+::rcode {\bfseries Create\+Graphics} (bool b\+Full\+Screen, bool b\+Enable\+V\+S\+Y\+NC, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+View\+Pos, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+View\+Size) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a1055cdd25b6778ba5dbd434d3fd78517}\label{classolc_1_1Platform__Linux_a1055cdd25b6778ba5dbd434d3fd78517}} 
+virtual olc\+::rcode {\bfseries Create\+Window\+Pane} (const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+Window\+Pos, \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+Window\+Size, bool b\+Full\+Screen) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a98a575fcb8f083b77798e75ceb255483}\label{classolc_1_1Platform__Linux_a98a575fcb8f083b77798e75ceb255483}} 
+virtual olc\+::rcode {\bfseries Set\+Window\+Title} (const std\+::string \&s) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a050019e734375d83d94af7652bc4d72b}\label{classolc_1_1Platform__Linux_a050019e734375d83d94af7652bc4d72b}} 
+virtual olc\+::rcode {\bfseries Start\+System\+Event\+Loop} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a4b5e941d4fe6a8641023f6d771045cbd}\label{classolc_1_1Platform__Linux_a4b5e941d4fe6a8641023f6d771045cbd}} 
+virtual olc\+::rcode {\bfseries Handle\+System\+Event} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a86bc2628251d9f4132223af24551ab91}\label{classolc_1_1Platform__Linux_a86bc2628251d9f4132223af24551ab91}} 
+X11\+::\+Display $\ast$ {\bfseries olc\+\_\+\+Display} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_ac75a16c3a39cf8aedd8fa24d08975d96}\label{classolc_1_1Platform__Linux_ac75a16c3a39cf8aedd8fa24d08975d96}} 
+X11\+::\+Window {\bfseries olc\+\_\+\+Window\+Root}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_ad8d0c16b8a72b50a5532f10f9124afa8}\label{classolc_1_1Platform__Linux_ad8d0c16b8a72b50a5532f10f9124afa8}} 
+X11\+::\+Window {\bfseries olc\+\_\+\+Window}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a2d72c5bd3c960ab9c03f94f5bfe77d5b}\label{classolc_1_1Platform__Linux_a2d72c5bd3c960ab9c03f94f5bfe77d5b}} 
+X11\+::\+X\+Visual\+Info $\ast$ {\bfseries olc\+\_\+\+Visual\+Info}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a53577f0709fef525e1ec24591bbcfafd}\label{classolc_1_1Platform__Linux_a53577f0709fef525e1ec24591bbcfafd}} 
+X11\+::\+Colormap {\bfseries olc\+\_\+\+Colour\+Map}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Linux_a92108567a02dd6360019954128a3d22e}\label{classolc_1_1Platform__Linux_a92108567a02dd6360019954128a3d22e}} 
+X11\+::\+X\+Set\+Window\+Attributes {\bfseries olc\+\_\+\+Set\+Window\+Attribs}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+olc\+Pixel\+Game\+Engine.\+h\end{DoxyCompactItemize}

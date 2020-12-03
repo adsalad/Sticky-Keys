@@ -1,0 +1,88 @@
+\hypertarget{classolc_1_1Renderer__OGL10}{}\doxysection{olc\+::Renderer\+\_\+\+O\+G\+L10 Class Reference}
+\label{classolc_1_1Renderer__OGL10}\index{olc::Renderer\_OGL10@{olc::Renderer\_OGL10}}
+
+
+Inheritance diagram for olc\+::Renderer\+\_\+\+O\+G\+L10\+:
+% FIG 0
+
+
+Collaboration diagram for olc\+::Renderer\+\_\+\+O\+G\+L10\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a17d329b46a9ff3c97fbcf278d2d24431}\label{classolc_1_1Renderer__OGL10_a17d329b46a9ff3c97fbcf278d2d24431}} 
+void {\bfseries Prepare\+Device} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a96d4374a213cfceb4a1c481a87d07abd}\label{classolc_1_1Renderer__OGL10_a96d4374a213cfceb4a1c481a87d07abd}} 
+olc\+::rcode {\bfseries Create\+Device} (std\+::vector$<$ void $\ast$ $>$ params, bool b\+Full\+Screen, bool b\+V\+S\+Y\+NC) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a30c55fed022d7b94358380973db6310c}\label{classolc_1_1Renderer__OGL10_a30c55fed022d7b94358380973db6310c}} 
+olc\+::rcode {\bfseries Destroy\+Device} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a133a1c4cf39fa78db9e53b9908d7ae33}\label{classolc_1_1Renderer__OGL10_a133a1c4cf39fa78db9e53b9908d7ae33}} 
+void {\bfseries Display\+Frame} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a67b0660c7b3266eaa5f51c9f7dc016eb}\label{classolc_1_1Renderer__OGL10_a67b0660c7b3266eaa5f51c9f7dc016eb}} 
+void {\bfseries Prepare\+Drawing} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a9955c65c64a4f8cfcf50c6d909fd9101}\label{classolc_1_1Renderer__OGL10_a9955c65c64a4f8cfcf50c6d909fd9101}} 
+void {\bfseries Set\+Decal\+Mode} (const olc\+::\+Decal\+Mode \&mode)
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_aa76a2181349b342804a2eed0978cfe1b}\label{classolc_1_1Renderer__OGL10_aa76a2181349b342804a2eed0978cfe1b}} 
+void {\bfseries Draw\+Layer\+Quad} (const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vf2d}} \&offset, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vf2d}} \&scale, const \mbox{\hyperlink{structolc_1_1Pixel}{olc\+::\+Pixel}} tint) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a922818383856b52f7952a3d9480c1331}\label{classolc_1_1Renderer__OGL10_a922818383856b52f7952a3d9480c1331}} 
+void {\bfseries Draw\+Decal\+Quad} (const \mbox{\hyperlink{structolc_1_1DecalInstance}{olc\+::\+Decal\+Instance}} \&decal) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_af513be1268507d657f7c32d439b551f4}\label{classolc_1_1Renderer__OGL10_af513be1268507d657f7c32d439b551f4}} 
+uint32\+\_\+t {\bfseries Create\+Texture} (const uint32\+\_\+t width, const uint32\+\_\+t height, const bool filtered) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a55c0683234b9987f22e9443630ab0dc3}\label{classolc_1_1Renderer__OGL10_a55c0683234b9987f22e9443630ab0dc3}} 
+uint32\+\_\+t {\bfseries Delete\+Texture} (const uint32\+\_\+t id) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_af5a9344c4149c5e38b7b6e93452099e4}\label{classolc_1_1Renderer__OGL10_af5a9344c4149c5e38b7b6e93452099e4}} 
+void {\bfseries Update\+Texture} (uint32\+\_\+t id, \mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$spr) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a9e5a01fbe69b0fdeabc466cd5be54fde}\label{classolc_1_1Renderer__OGL10_a9e5a01fbe69b0fdeabc466cd5be54fde}} 
+void {\bfseries Apply\+Texture} (uint32\+\_\+t id) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a11a385843b65cf4b06a9fb32c8d96c53}\label{classolc_1_1Renderer__OGL10_a11a385843b65cf4b06a9fb32c8d96c53}} 
+void {\bfseries Clear\+Buffer} (\mbox{\hyperlink{structolc_1_1Pixel}{olc\+::\+Pixel}} p, bool b\+Depth) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_abff10f5e256c858fc33d37e4fc5d7e8b}\label{classolc_1_1Renderer__OGL10_abff10f5e256c858fc33d37e4fc5d7e8b}} 
+void {\bfseries Update\+Viewport} (const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&pos, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&size) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a6c5205ca9b2d4ebbb1ec194b6650858a}\label{classolc_1_1Renderer__OGL10_a6c5205ca9b2d4ebbb1ec194b6650858a}} 
+bool {\bfseries m\+Full\+Screen} = false
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a9315db955d89cacafda073abdd294dd1}\label{classolc_1_1Renderer__OGL10_a9315db955d89cacafda073abdd294dd1}} 
+gl\+Device\+Context\+\_\+t {\bfseries gl\+Device\+Context} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_abbc233c6a5ba000908ba12d97069086e}\label{classolc_1_1Renderer__OGL10_abbc233c6a5ba000908ba12d97069086e}} 
+gl\+Render\+Context\+\_\+t {\bfseries gl\+Render\+Context} = 0
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a4325bb1adb54a2460134ff7070059dad}\label{classolc_1_1Renderer__OGL10_a4325bb1adb54a2460134ff7070059dad}} 
+bool {\bfseries b\+Sync} = false
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_aa223219865acc02413a3d0a426c9bb3e}\label{classolc_1_1Renderer__OGL10_aa223219865acc02413a3d0a426c9bb3e}} 
+olc\+::\+Decal\+Mode {\bfseries n\+Decal\+Mode} = olc\+::\+Decal\+Mode(-\/1)
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_a8c232fec7d91eee5a101fe700e01be61}\label{classolc_1_1Renderer__OGL10_a8c232fec7d91eee5a101fe700e01be61}} 
+X11\+::\+Display $\ast$ {\bfseries olc\+\_\+\+Display} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_acc9e0bcabd6edbb689af8abec5307527}\label{classolc_1_1Renderer__OGL10_acc9e0bcabd6edbb689af8abec5307527}} 
+X11\+::\+Window $\ast$ {\bfseries olc\+\_\+\+Window} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1Renderer__OGL10_aceccc0c8571ccb3f15e767fac4fe42d5}\label{classolc_1_1Renderer__OGL10_aceccc0c8571ccb3f15e767fac4fe42d5}} 
+X11\+::\+X\+Visual\+Info $\ast$ {\bfseries olc\+\_\+\+Visual\+Info} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+olc\+Pixel\+Game\+Engine.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,446 @@
+\hypertarget{classPlayer}{}\doxysection{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+
+
+This class represents the playable character object.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Collaboration diagram for Player\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\mbox{\hyperlink{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the player class (doesn\textquotesingle{}t get used) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer_ac0cedc5fe83ca109a9b2900e0a503a58}{Player}} (float xP, float yP, float xV, float yV)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPlayer}{Player}} Constructor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPlayer_a9523d708b1a881c84221161c52768019}{get\+X\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em get\+X\+Pos \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPlayer_a4b1fdc3b1ee33c8984bdde572593c50b}{get\+Y\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em get\+Y\+Pos \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPlayer_a72ade907f793a899ccec6d7a5ba9b9b5}{get\+X\+Vel}} ()
+\begin{DoxyCompactList}\small\item\em get\+X\+Vel \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPlayer_a55f86e11c17b346d84c7bf1eaf32a07e}{get\+Y\+Vel}} ()
+\begin{DoxyCompactList}\small\item\em get\+Y\+Vel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a816d4cced1324bd11aa24bb83936334d}{set\+X\+Pos}} (float x\+Pos)
+\begin{DoxyCompactList}\small\item\em set\+X\+Pos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a9665cbbf1ca8a4e73a20fa486947e0d8}{set\+Y\+Pos}} (float y\+Pos)
+\begin{DoxyCompactList}\small\item\em set\+Y\+Pos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a60404aec3f3c10ac6f5fada6d246efa3}{set\+X\+Vel}} (float x\+Vel)
+\begin{DoxyCompactList}\small\item\em set\+X\+Vel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_aa98c10f82f529b9c0da7e9841dec37e5}{set\+Y\+Vel}} (float y\+Vel)
+\begin{DoxyCompactList}\small\item\em set\+Y\+Vel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_af751ac569517e40bc39a5ea3bda9affd}{set\+Move\+Left}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Move\+Left \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a5fc10abbc33ba049f0527e6c6a6651ec}{set\+Move\+Right}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Move\+Right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_ad3e4310e776521320ae6445a31384692}{set\+Can\+Jump}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Can\+Jump \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a631443098fb714dfd0d88a0e87839fcb}{process\+Input}} (\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$pge, \mbox{\hyperlink{classLevel}{Level}} $\ast$current\+Level, float f\+Elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em process\+Input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a2b9662ff717992d897724ed86e04b3a1}{draw}} (\mbox{\hyperlink{classLevel}{Level}} $\ast$current\+Level, \mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$pge)
+\begin{DoxyCompactList}\small\item\em draw \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a20a173aaa8e3406de04ab5918cd9d208}{set\+Flag}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Flag \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_a061ebe9827bd8e5798cdbf647d690c46}{get\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em get\+Flag \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_ace0a26563b4eb9673cdc226d486a5630}{get\+Death\+Status}} ()
+\begin{DoxyCompactList}\small\item\em get\+Death\+Status \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_abfc2b49605bcb3f12e0df097f67430e9}{is\+At\+Goal}} ()
+\begin{DoxyCompactList}\small\item\em is\+At\+Goal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a2e7c2ed90824dab0889d5f0cdc1e6f75}{set\+Death\+Status}} (bool val)
+\begin{DoxyCompactList}\small\item\em set\+Deah\+Status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a974e66d9f2c0a6f5ffc8249fd9c72126}{death}} ()
+\begin{DoxyCompactList}\small\item\em death \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a5d5f04fda1a8534138cd75077192c648}{win}} ()
+\begin{DoxyCompactList}\small\item\em win \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_accc6517901417adbdff65924fb1f6c62}\label{classPlayer_accc6517901417adbdff65924fb1f6c62}} 
+float {\bfseries x\+Pos}
+\item 
+\mbox{\Hypertarget{classPlayer_a41467d170f2e02c1a9df9c8fac9cc20d}\label{classPlayer_a41467d170f2e02c1a9df9c8fac9cc20d}} 
+float {\bfseries y\+Pos}
+\item 
+\mbox{\Hypertarget{classPlayer_a1999ba6a27d5503b48dc243c32f39f89}\label{classPlayer_a1999ba6a27d5503b48dc243c32f39f89}} 
+float {\bfseries x\+Velocity}
+\item 
+\mbox{\Hypertarget{classPlayer_a675e49999a15cadd03aebaa097b683a4}\label{classPlayer_a675e49999a15cadd03aebaa097b683a4}} 
+float {\bfseries y\+Velocity}
+\item 
+\mbox{\Hypertarget{classPlayer_a412445734739c48ca4acde063fcdf1b8}\label{classPlayer_a412445734739c48ca4acde063fcdf1b8}} 
+float {\bfseries checkpointX}
+\item 
+\mbox{\Hypertarget{classPlayer_a467dc390bd506e860f1d56ae91f5f938}\label{classPlayer_a467dc390bd506e860f1d56ae91f5f938}} 
+float {\bfseries checkpointY}
+\item 
+\mbox{\Hypertarget{classPlayer_a2d8240a36bff19bb9852388a6b1d026c}\label{classPlayer_a2d8240a36bff19bb9852388a6b1d026c}} 
+bool {\bfseries can\+Move\+Left}
+\item 
+\mbox{\Hypertarget{classPlayer_adcc9e68658ca31d3ca479dc4943336fd}\label{classPlayer_adcc9e68658ca31d3ca479dc4943336fd}} 
+bool {\bfseries can\+Move\+Right}
+\item 
+\mbox{\Hypertarget{classPlayer_adc45785d6d5075072ef675ce2781f6ff}\label{classPlayer_adc45785d6d5075072ef675ce2781f6ff}} 
+bool {\bfseries can\+Jump}
+\item 
+\mbox{\Hypertarget{classPlayer_a12c8bb2a50785eeb6ce4cc3fdafe0c63}\label{classPlayer_a12c8bb2a50785eeb6ce4cc3fdafe0c63}} 
+bool {\bfseries on\+Ground}
+\item 
+\mbox{\Hypertarget{classPlayer_aabdfd52a2ce68d65a15cf6ddf6be4fc3}\label{classPlayer_aabdfd52a2ce68d65a15cf6ddf6be4fc3}} 
+bool {\bfseries is\+Dead}
+\item 
+\mbox{\Hypertarget{classPlayer_a319ddbd239b2114102f0d6e742c6f8b0}\label{classPlayer_a319ddbd239b2114102f0d6e742c6f8b0}} 
+bool {\bfseries facing\+Right}
+\item 
+\mbox{\Hypertarget{classPlayer_a70a57c80a49793a67549c14a5c87305b}\label{classPlayer_a70a57c80a49793a67549c14a5c87305b}} 
+bool {\bfseries flag\+Passed}
+\item 
+\mbox{\Hypertarget{classPlayer_ac60cc9127f6fcd4331f5b0ea6bf9775b}\label{classPlayer_ac60cc9127f6fcd4331f5b0ea6bf9775b}} 
+bool {\bfseries at\+Goal}
+\item 
+\mbox{\Hypertarget{classPlayer_ae2cff45065382ea862847295a5302ede}\label{classPlayer_ae2cff45065382ea862847295a5302ede}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries player\+Sprite}
+\item 
+\mbox{\Hypertarget{classPlayer_a2a30ece69076cf66c8bf6427f52a9b4f}\label{classPlayer_a2a30ece69076cf66c8bf6427f52a9b4f}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries player\+Move\+Right}
+\item 
+\mbox{\Hypertarget{classPlayer_ace5d45a91301bf896a738f09104b32e8}\label{classPlayer_ace5d45a91301bf896a738f09104b32e8}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries player\+Move\+Left}
+\item 
+\mbox{\Hypertarget{classPlayer_a5cec868b7f73a321198f33bbee6db867}\label{classPlayer_a5cec868b7f73a321198f33bbee6db867}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries player\+Jump\+Right}
+\item 
+\mbox{\Hypertarget{classPlayer_a7347e5f9cd3afd8c7a7555b85e9590b2}\label{classPlayer_a7347e5f9cd3afd8c7a7555b85e9590b2}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries player\+Jump\+Left}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the playable character object. 
+
+\begin{DoxyAuthor}{Authors}
+Jose Torrealba, Cole Chang
+\end{DoxyAuthor}
+This class represents the player object. There will only be one of these that exist in a game at any time as this object is what the user will control. Through keyboard input (using W\+A\+SD, arrow keys and spacebar), the user can control the movement and position of this player character throughout the game. This class deals with the various input and corresponding changes to the player position, velocity and death/win status throughout the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayer_ac0cedc5fe83ca109a9b2900e0a503a58}\label{classPlayer_ac0cedc5fe83ca109a9b2900e0a503a58}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{float}]{xP,  }\item[{float}]{yP,  }\item[{float}]{xV,  }\item[{float}]{yV }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classPlayer}{Player}} Constructor. 
+
+This constructor for the player class takes in parameters to set key instance variables 
+\begin{DoxyParams}{Parameters}
+{\em xP} & the x position of the player object \\
+\hline
+{\em yP} & the y position of the player object \\
+\hline
+{\em xV} & the x/horizontal velocity of the player object \\
+\hline
+{\em yV} & the y/vertical velocity of the player object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a974e66d9f2c0a6f5ffc8249fd9c72126}\label{classPlayer_a974e66d9f2c0a6f5ffc8249fd9c72126}} 
+\index{Player@{Player}!death@{death}}
+\index{death@{death}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void Player\+::death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+death 
+
+Function that is called when the player has died. Resets the position of the player and restores all movement \mbox{\Hypertarget{classPlayer_a2b9662ff717992d897724ed86e04b3a1}\label{classPlayer_a2b9662ff717992d897724ed86e04b3a1}} 
+\index{Player@{Player}!draw@{draw}}
+\index{draw@{draw}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Player\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLevel}{Level}} $\ast$}]{current\+Level,  }\item[{\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$}]{pge }\end{DoxyParamCaption})}
+
+
+
+draw 
+
+Function that draws the player object 
+\begin{DoxyParams}{Parameters}
+{\em current\+Level} & reference to the current level \\
+\hline
+{\em pge} & reference to the current pixel\+Game\+Engine object to provide access to window-\/drawing methods \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_ace0a26563b4eb9673cdc226d486a5630}\label{classPlayer_ace0a26563b4eb9673cdc226d486a5630}} 
+\index{Player@{Player}!getDeathStatus@{getDeathStatus}}
+\index{getDeathStatus@{getDeathStatus}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getDeathStatus()}{getDeathStatus()}}
+{\footnotesize\ttfamily bool Player\+::get\+Death\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Death\+Status 
+
+Function that returns the current value of the boolean that represents whether the player has died \begin{DoxyReturn}{Returns}
+the boolean that represents whether the player has died 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a061ebe9827bd8e5798cdbf647d690c46}\label{classPlayer_a061ebe9827bd8e5798cdbf647d690c46}} 
+\index{Player@{Player}!getFlag@{getFlag}}
+\index{getFlag@{getFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getFlag()}{getFlag()}}
+{\footnotesize\ttfamily bool Player\+::get\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Flag 
+
+Function that returns the current value of the boolean that represents whether the checkpoint has been passed by the player \begin{DoxyReturn}{Returns}
+the boolean that represents whether the checkpoint has been passed by the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a9523d708b1a881c84221161c52768019}\label{classPlayer_a9523d708b1a881c84221161c52768019}} 
+\index{Player@{Player}!getXPos@{getXPos}}
+\index{getXPos@{getXPos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getXPos()}{getXPos()}}
+{\footnotesize\ttfamily float Player\+::get\+X\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+X\+Pos 
+
+Function that returns the current x position of this player object \begin{DoxyReturn}{Returns}
+x position of this player object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a72ade907f793a899ccec6d7a5ba9b9b5}\label{classPlayer_a72ade907f793a899ccec6d7a5ba9b9b5}} 
+\index{Player@{Player}!getXVel@{getXVel}}
+\index{getXVel@{getXVel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getXVel()}{getXVel()}}
+{\footnotesize\ttfamily float Player\+::get\+X\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+X\+Vel 
+
+Function that returns the current x velocity of this player object \begin{DoxyReturn}{Returns}
+x velocity of this player object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a4b1fdc3b1ee33c8984bdde572593c50b}\label{classPlayer_a4b1fdc3b1ee33c8984bdde572593c50b}} 
+\index{Player@{Player}!getYPos@{getYPos}}
+\index{getYPos@{getYPos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getYPos()}{getYPos()}}
+{\footnotesize\ttfamily float Player\+::get\+Y\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Y\+Pos 
+
+Function that returns the current y position of this player object \begin{DoxyReturn}{Returns}
+y position of this player object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a55f86e11c17b346d84c7bf1eaf32a07e}\label{classPlayer_a55f86e11c17b346d84c7bf1eaf32a07e}} 
+\index{Player@{Player}!getYVel@{getYVel}}
+\index{getYVel@{getYVel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getYVel()}{getYVel()}}
+{\footnotesize\ttfamily float Player\+::get\+Y\+Vel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Y\+Vel 
+
+Function that returns the current y velocity of this player object \begin{DoxyReturn}{Returns}
+y velocity of this player object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_abfc2b49605bcb3f12e0df097f67430e9}\label{classPlayer_abfc2b49605bcb3f12e0df097f67430e9}} 
+\index{Player@{Player}!isAtGoal@{isAtGoal}}
+\index{isAtGoal@{isAtGoal}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{isAtGoal()}{isAtGoal()}}
+{\footnotesize\ttfamily bool Player\+::is\+At\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+At\+Goal 
+
+Function that returns the current value of the boolean that represents whether the player has reached the end of the level \begin{DoxyReturn}{Returns}
+the boolean that represents whether the player has reached the end of the level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a631443098fb714dfd0d88a0e87839fcb}\label{classPlayer_a631443098fb714dfd0d88a0e87839fcb}} 
+\index{Player@{Player}!processInput@{processInput}}
+\index{processInput@{processInput}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void Player\+::process\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$}]{pge,  }\item[{\mbox{\hyperlink{classLevel}{Level}} $\ast$}]{current\+Level,  }\item[{float}]{f\+Elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+process\+Input 
+
+Function that processes the keyboard input from the user to determine how the player object moves 
+\begin{DoxyParams}{Parameters}
+{\em pge} & reference to the pixel\+Game\+Engine object to provide access to input-\/related methods \\
+\hline
+{\em current\+Level} & reference to the current level \\
+\hline
+{\em f\+Elapsed\+Time} & reference to the amount of frames in elapsed time (used for equal performance purposes across machines) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_ad3e4310e776521320ae6445a31384692}\label{classPlayer_ad3e4310e776521320ae6445a31384692}} 
+\index{Player@{Player}!setCanJump@{setCanJump}}
+\index{setCanJump@{setCanJump}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setCanJump()}{setCanJump()}}
+{\footnotesize\ttfamily void Player\+::set\+Can\+Jump (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Can\+Jump 
+
+Function that sets the boolean that determines whether the player can jump to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the value that the boolean representing whether the player can jump will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a2e7c2ed90824dab0889d5f0cdc1e6f75}\label{classPlayer_a2e7c2ed90824dab0889d5f0cdc1e6f75}} 
+\index{Player@{Player}!setDeathStatus@{setDeathStatus}}
+\index{setDeathStatus@{setDeathStatus}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setDeathStatus()}{setDeathStatus()}}
+{\footnotesize\ttfamily void Player\+::set\+Death\+Status (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Deah\+Status 
+
+Function that sets the boolean representing whether the player has died to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the value that the boolean representing whether the player has died will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a20a173aaa8e3406de04ab5918cd9d208}\label{classPlayer_a20a173aaa8e3406de04ab5918cd9d208}} 
+\index{Player@{Player}!setFlag@{setFlag}}
+\index{setFlag@{setFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setFlag()}{setFlag()}}
+{\footnotesize\ttfamily void Player\+::set\+Flag (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Flag 
+
+Function that sets the boolean that represents whether or not checkpoint flag has been passed to specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the value that the boolean representing whether the player has passed the checkpoint will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_af751ac569517e40bc39a5ea3bda9affd}\label{classPlayer_af751ac569517e40bc39a5ea3bda9affd}} 
+\index{Player@{Player}!setMoveLeft@{setMoveLeft}}
+\index{setMoveLeft@{setMoveLeft}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setMoveLeft()}{setMoveLeft()}}
+{\footnotesize\ttfamily void Player\+::set\+Move\+Left (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Move\+Left 
+
+Function that sets the boolean that determines whether the player can move left to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the value that the boolean representing whether the player can move left will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a5fc10abbc33ba049f0527e6c6a6651ec}\label{classPlayer_a5fc10abbc33ba049f0527e6c6a6651ec}} 
+\index{Player@{Player}!setMoveRight@{setMoveRight}}
+\index{setMoveRight@{setMoveRight}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setMoveRight()}{setMoveRight()}}
+{\footnotesize\ttfamily void Player\+::set\+Move\+Right (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})}
+
+
+
+set\+Move\+Right 
+
+Function that sets the boolean that determines whether the player can move right to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the value that the boolean representing whether the player can move right will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a816d4cced1324bd11aa24bb83936334d}\label{classPlayer_a816d4cced1324bd11aa24bb83936334d}} 
+\index{Player@{Player}!setXPos@{setXPos}}
+\index{setXPos@{setXPos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setXPos()}{setXPos()}}
+{\footnotesize\ttfamily void Player\+::set\+X\+Pos (\begin{DoxyParamCaption}\item[{float}]{x\+Pos }\end{DoxyParamCaption})}
+
+
+
+set\+X\+Pos 
+
+Function that sets the x position of this player object to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em x\+Pos} & the value that this player\textquotesingle{}s x position will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a60404aec3f3c10ac6f5fada6d246efa3}\label{classPlayer_a60404aec3f3c10ac6f5fada6d246efa3}} 
+\index{Player@{Player}!setXVel@{setXVel}}
+\index{setXVel@{setXVel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setXVel()}{setXVel()}}
+{\footnotesize\ttfamily void Player\+::set\+X\+Vel (\begin{DoxyParamCaption}\item[{float}]{x\+Vel }\end{DoxyParamCaption})}
+
+
+
+set\+X\+Vel 
+
+Function that sets the x velocity of this player object to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em x\+Vel} & the value that this player\textquotesingle{}s x velocity will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a9665cbbf1ca8a4e73a20fa486947e0d8}\label{classPlayer_a9665cbbf1ca8a4e73a20fa486947e0d8}} 
+\index{Player@{Player}!setYPos@{setYPos}}
+\index{setYPos@{setYPos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setYPos()}{setYPos()}}
+{\footnotesize\ttfamily void Player\+::set\+Y\+Pos (\begin{DoxyParamCaption}\item[{float}]{y\+Pos }\end{DoxyParamCaption})}
+
+
+
+set\+Y\+Pos 
+
+Function that sets the y position of this player object to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em y\+Pos} & the value that this player\textquotesingle{}s y position will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_aa98c10f82f529b9c0da7e9841dec37e5}\label{classPlayer_aa98c10f82f529b9c0da7e9841dec37e5}} 
+\index{Player@{Player}!setYVel@{setYVel}}
+\index{setYVel@{setYVel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setYVel()}{setYVel()}}
+{\footnotesize\ttfamily void Player\+::set\+Y\+Vel (\begin{DoxyParamCaption}\item[{float}]{y\+Vel }\end{DoxyParamCaption})}
+
+
+
+set\+Y\+Vel 
+
+Function that sets the y velocity of this player object to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em y\+Vel} & the value that this player\textquotesingle{}s y velocity will be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a5d5f04fda1a8534138cd75077192c648}\label{classPlayer_a5d5f04fda1a8534138cd75077192c648}} 
+\index{Player@{Player}!win@{win}}
+\index{win@{win}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{win()}{win()}}
+{\footnotesize\ttfamily void Player\+::win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+win 
+
+Function that is called when the player has reached the end of the level. Resets the position of the player, restores all movement and resets flag booleans 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+player.\+h\item 
+player.\+cpp\end{DoxyCompactItemize}

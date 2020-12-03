@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['scurrentlyplayingsample_51',['sCurrentlyPlayingSample',['../structolc_1_1SOUND_1_1sCurrentlyPlayingSample.html',1,'olc::SOUND']]],
+  ['setcanjump_52',['setCanJump',['../classPlayer.html#ad3e4310e776521320ae6445a31384692',1,'Player']]],
+  ['setdeathstatus_53',['setDeathStatus',['../classPlayer.html#a2e7c2ed90824dab0889d5f0cdc1e6f75',1,'Player']]],
+  ['setfixtiles_54',['setFixTiles',['../classLevel.html#af7bd5916c19f6d0d3bfe3b3e6d708cc1',1,'Level']]],
+  ['setflag_55',['setFlag',['../classPlayer.html#a20a173aaa8e3406de04ab5918cd9d208',1,'Player']]],
+  ['setisclicked_56',['setIsClicked',['../classKeyTile.html#a8488b820434c8e62ce40fc5edb14293b',1,'KeyTile']]],
+  ['setisplaced_57',['setIsPlaced',['../classKeyTile.html#a10370498d741b0ad66c6ded7379b46ab',1,'KeyTile']]],
+  ['setmoveleft_58',['setMoveLeft',['../classPlayer.html#af751ac569517e40bc39a5ea3bda9affd',1,'Player']]],
+  ['setmoveright_59',['setMoveRight',['../classPlayer.html#a5fc10abbc33ba049f0527e6c6a6651ec',1,'Player']]],
+  ['settile_60',['setTile',['../classLevel.html#a2776fca215adc4f30a786d1f635275a4',1,'Level']]],
+  ['setxpos_61',['setXPos',['../classPlayer.html#a816d4cced1324bd11aa24bb83936334d',1,'Player']]],
+  ['setxvel_62',['setXVel',['../classPlayer.html#a60404aec3f3c10ac6f5fada6d246efa3',1,'Player']]],
+  ['setypos_63',['setYPos',['../classPlayer.html#a9665cbbf1ca8a4e73a20fa486947e0d8',1,'Player']]],
+  ['setyvel_64',['setYVel',['../classPlayer.html#aa98c10f82f529b9c0da7e9841dec37e5',1,'Player']]],
+  ['sound_65',['SOUND',['../classolc_1_1SOUND.html',1,'olc']]],
+  ['sprite_66',['Sprite',['../classolc_1_1Sprite.html',1,'olc']]],
+  ['sresourcefile_67',['sResourceFile',['../structolc_1_1ResourcePack_1_1sResourceFile.html',1,'olc::ResourcePack']]],
+  ['stickykeys_68',['StickyKeys',['../classStickyKeys.html',1,'StickyKeys'],['../classStickyKeys.html#a80b95950dbd9096cbaa974085b3a0264',1,'StickyKeys::StickyKeys()']]]
+];

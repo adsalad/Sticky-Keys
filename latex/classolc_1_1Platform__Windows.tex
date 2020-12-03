@@ -1,0 +1,67 @@
+\hypertarget{classolc_1_1Platform__Windows}{}\doxysection{olc\+::Platform\+\_\+\+Windows Class Reference}
+\label{classolc_1_1Platform__Windows}\index{olc::Platform\_Windows@{olc::Platform\_Windows}}
+
+
+Inheritance diagram for olc\+::Platform\+\_\+\+Windows\+:
+% FIG 0
+
+
+Collaboration diagram for olc\+::Platform\+\_\+\+Windows\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a12019d88d96b8a8a942626f971025a3d}\label{classolc_1_1Platform__Windows_a12019d88d96b8a8a942626f971025a3d}} 
+virtual olc\+::rcode {\bfseries Application\+Start\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a8537a207827ae1b27133c35417a84273}\label{classolc_1_1Platform__Windows_a8537a207827ae1b27133c35417a84273}} 
+virtual olc\+::rcode {\bfseries Application\+Clean\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a1882238bd7afabaa0c60ddb17cb85612}\label{classolc_1_1Platform__Windows_a1882238bd7afabaa0c60ddb17cb85612}} 
+virtual olc\+::rcode {\bfseries Thread\+Start\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a61440b0d9f03436f165f3f11ded3c6c4}\label{classolc_1_1Platform__Windows_a61440b0d9f03436f165f3f11ded3c6c4}} 
+virtual olc\+::rcode {\bfseries Thread\+Clean\+Up} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a05a44a578f14e3c02412f632a81c617a}\label{classolc_1_1Platform__Windows_a05a44a578f14e3c02412f632a81c617a}} 
+virtual olc\+::rcode {\bfseries Create\+Graphics} (bool b\+Full\+Screen, bool b\+Enable\+V\+S\+Y\+NC, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+View\+Pos, const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+View\+Size) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a77d65d3efa5f2501c04934fa9c3f81cb}\label{classolc_1_1Platform__Windows_a77d65d3efa5f2501c04934fa9c3f81cb}} 
+virtual olc\+::rcode {\bfseries Create\+Window\+Pane} (const \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+Window\+Pos, \mbox{\hyperlink{structolc_1_1v2d__generic}{olc\+::vi2d}} \&v\+Window\+Size, bool b\+Full\+Screen) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a67e33b74b67053b85107fd348b2fe517}\label{classolc_1_1Platform__Windows_a67e33b74b67053b85107fd348b2fe517}} 
+virtual olc\+::rcode {\bfseries Set\+Window\+Title} (const std\+::string \&s) override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_af02a8e7c98aca867f8936aa848dc3a2a}\label{classolc_1_1Platform__Windows_af02a8e7c98aca867f8936aa848dc3a2a}} 
+virtual olc\+::rcode {\bfseries Start\+System\+Event\+Loop} () override
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a3ad3ab81e65a2aa50068a6b86ca8d235}\label{classolc_1_1Platform__Windows_a3ad3ab81e65a2aa50068a6b86ca8d235}} 
+virtual olc\+::rcode {\bfseries Handle\+System\+Event} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a0a9bc7a3c95d2c11d2361ae65dad6bab}\label{classolc_1_1Platform__Windows_a0a9bc7a3c95d2c11d2361ae65dad6bab}} 
+static L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK {\bfseries olc\+\_\+\+Window\+Event} (H\+W\+ND h\+Wnd, U\+I\+NT u\+Msg, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a3773e00ba9ef5e925b6af6bfb15b4f35}\label{classolc_1_1Platform__Windows_a3773e00ba9ef5e925b6af6bfb15b4f35}} 
+std\+::wstring {\bfseries Convert\+S2W} (std\+::string s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a62451e7d3f145e2d363cd67ce9403f92}\label{classolc_1_1Platform__Windows_a62451e7d3f145e2d363cd67ce9403f92}} 
+H\+W\+ND {\bfseries olc\+\_\+h\+Wnd} = nullptr
+\item 
+\mbox{\Hypertarget{classolc_1_1Platform__Windows_a45d715aec09f3d8a48940bf091be5ad5}\label{classolc_1_1Platform__Windows_a45d715aec09f3d8a48940bf091be5ad5}} 
+std\+::wstring {\bfseries ws\+App\+Name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+olc\+Pixel\+Game\+Engine.\+h\end{DoxyCompactItemize}

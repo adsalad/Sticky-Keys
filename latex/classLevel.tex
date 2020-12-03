@@ -1,0 +1,326 @@
+\hypertarget{classLevel}{}\doxysection{Level Class Reference}
+\label{classLevel}\index{Level@{Level}}
+
+
+This class represents each level in the game.  
+
+
+
+
+{\ttfamily \#include $<$level.\+h$>$}
+
+
+
+Collaboration diagram for Level\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLevel_a7a696c928ca5d5354db6e50e46d0f67d}{Level}} ()
+\item 
+\mbox{\hyperlink{classLevel_ae3c98afba420dc0ae16caaa6c61f908c}{Level}} (int lW, int lH, int tW, int tH, std\+::string f\+Name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classLevel}{Level}} Constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLevel_a986cd05306bcdbb9f8e1dbddab258076}{get\+Level\+Width}} ()
+\begin{DoxyCompactList}\small\item\em get\+Level\+Width \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLevel_a78ab827c2c598cc5e9ae29af6617eee7}{get\+Level\+Height}} ()
+\begin{DoxyCompactList}\small\item\em get\+Level\+Height \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLevel_a0aef4ab972473f6f0cb51955d80aac36}{get\+Tile\+Width}} ()
+\begin{DoxyCompactList}\small\item\em get\+Tile\+Width \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLevel_a13c730666a32c15f358a15c02ff6095b}{get\+Tile\+Height}} ()
+\begin{DoxyCompactList}\small\item\em get\+Tile\+Height \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classLevel_a217688b5bc7029059e64e0ef5f8dd7c9}{get\+OffsetX}} ()
+\begin{DoxyCompactList}\small\item\em get\+OffsetX \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classLevel_a3cde3a4fe10cc5b738f7447473476299}{get\+OffsetY}} ()
+\begin{DoxyCompactList}\small\item\em get\+OffsetY \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLevel_ae09f6770a79f04dd49aac9b7bebda182}{get\+Level\+Map}} ()
+\begin{DoxyCompactList}\small\item\em get\+Level\+Map \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classLevel_aba24be53917b382d91515aa0fec17888}{get\+Tile}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em get\+Tile \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLevel_a2776fca215adc4f30a786d1f635275a4}{set\+Tile}} (int x, int y, char c)
+\begin{DoxyCompactList}\small\item\em set\+Tile \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLevel_a97b90984fe9cee62e02e1814386dc999}{draw}} (float camX, float camY, \mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$pge)
+\begin{DoxyCompactList}\small\item\em draw \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLevel_af7bd5916c19f6d0d3bfe3b3e6d708cc1}{set\+Fix\+Tiles}} (bool fix)
+\begin{DoxyCompactList}\small\item\em set\+Fix\+Tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLevel_a508bd7ea1f273d8e2ba4832e091641eb}{get\+Fix\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em get\+Fix\+Tiles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLevel_a96a0acf0f21c6d980f9b8c75f13b1672}\label{classLevel_a96a0acf0f21c6d980f9b8c75f13b1672}} 
+int {\bfseries level\+Width}
+\item 
+\mbox{\Hypertarget{classLevel_a629c045305fc11af293d710df7cadc5e}\label{classLevel_a629c045305fc11af293d710df7cadc5e}} 
+int {\bfseries level\+Height}
+\item 
+\mbox{\Hypertarget{classLevel_a2c94c97b6a86cead462845d15993f003}\label{classLevel_a2c94c97b6a86cead462845d15993f003}} 
+int {\bfseries tile\+Width}
+\item 
+\mbox{\Hypertarget{classLevel_a2de69712cd3cea71bea46b271b43b74e}\label{classLevel_a2de69712cd3cea71bea46b271b43b74e}} 
+int {\bfseries tile\+Height}
+\item 
+\mbox{\Hypertarget{classLevel_a87026e1ee93e57b73c43fdf73c2a92f7}\label{classLevel_a87026e1ee93e57b73c43fdf73c2a92f7}} 
+bool {\bfseries fix\+Tiles}
+\item 
+\mbox{\Hypertarget{classLevel_a7a7851c30a2de987dd0165fc3cc2b251}\label{classLevel_a7a7851c30a2de987dd0165fc3cc2b251}} 
+float {\bfseries offsetX}
+\item 
+\mbox{\Hypertarget{classLevel_acacfee6c284bf1e4a68b325703e6473b}\label{classLevel_acacfee6c284bf1e4a68b325703e6473b}} 
+float {\bfseries offsetY}
+\item 
+\mbox{\Hypertarget{classLevel_aa0de1610fe7691d4809dc08d5c70a94d}\label{classLevel_aa0de1610fe7691d4809dc08d5c70a94d}} 
+std\+::string {\bfseries level\+Map}
+\item 
+\mbox{\Hypertarget{classLevel_a0747389cbedd1280f40bcf4fb1ab3bbd}\label{classLevel_a0747389cbedd1280f40bcf4fb1ab3bbd}} 
+std\+::string {\bfseries file\+Name}
+\item 
+\mbox{\Hypertarget{classLevel_aec7c1c4176eae38bc7e6ee69c7315204}\label{classLevel_aec7c1c4176eae38bc7e6ee69c7315204}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries ground\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_a0ba21c479f8574c70de4b39f37ec3b82}\label{classLevel_a0ba21c479f8574c70de4b39f37ec3b82}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries checkpoint\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_acdf4734dbbcdb6f1fc278d29f04d70b9}\label{classLevel_acdf4734dbbcdb6f1fc278d29f04d70b9}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries checkpoint\+Passed\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_afb8f7a1e4ef3b002ac1291abd437b594}\label{classLevel_afb8f7a1e4ef3b002ac1291abd437b594}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries finish\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_a5cb4b0222f2c25d5025317f1f8beac8e}\label{classLevel_a5cb4b0222f2c25d5025317f1f8beac8e}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries fire\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_aaff28373d6a79267dd33965c1cf69ed1}\label{classLevel_aaff28373d6a79267dd33965c1cf69ed1}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries right\+Placed\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_ab1b3efff4c10d5d66520170d7cfea5bd}\label{classLevel_ab1b3efff4c10d5d66520170d7cfea5bd}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries left\+Placed\+Sprite}
+\item 
+\mbox{\Hypertarget{classLevel_a436e3941f3743578d2203915af074bb7}\label{classLevel_a436e3941f3743578d2203915af074bb7}} 
+\mbox{\hyperlink{classolc_1_1Sprite}{olc\+::\+Sprite}} $\ast$ {\bfseries up\+Placed\+Sprite}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents each level in the game. 
+
+\begin{DoxyAuthor}{Authors}
+Jose Torrealba, Cole Chang
+\end{DoxyAuthor}
+This class represents each level in the game. In total, there will be five instances of said object, but more can be created down the line. The actual layout of a level is represented by characters in a text file stored in a working directory folder called Levels. This class deals with the reading of the corresponding text file and deals with scenarios in which the composition of the layout may change (if a player places a key\+Tile in a particular spot, for example). This class also determines the position of the camera by determining which subsection of the available tiles in the game to display on the screen at any given time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLevel_a7a696c928ca5d5354db6e50e46d0f67d}\label{classLevel_a7a696c928ca5d5354db6e50e46d0f67d}} 
+\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Level\+::\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The default constructor for the \mbox{\hyperlink{classLevel}{Level}} class (doesn\textquotesingle{}t get used) \mbox{\Hypertarget{classLevel_ae3c98afba420dc0ae16caaa6c61f908c}\label{classLevel_ae3c98afba420dc0ae16caaa6c61f908c}} 
+\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Level\+::\+Level (\begin{DoxyParamCaption}\item[{int}]{lW,  }\item[{int}]{lH,  }\item[{int}]{tW,  }\item[{int}]{tH,  }\item[{std\+::string}]{f\+Name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classLevel}{Level}} Constructor. 
+
+The main constructor for the \mbox{\hyperlink{classLevel}{Level}} class 
+\begin{DoxyParams}{Parameters}
+{\em lW} & the width of the level being created (\# number of tiles) \\
+\hline
+{\em lH} & the height of the level being created (\# number of tiles) \\
+\hline
+{\em tW} & the width of each tile (in pixels) \\
+\hline
+{\em tH} & the height of each tile (in pixels) \\
+\hline
+{\em f\+Name} & the name of the text file that contains the text representation of the level \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLevel_a97b90984fe9cee62e02e1814386dc999}\label{classLevel_a97b90984fe9cee62e02e1814386dc999}} 
+\index{Level@{Level}!draw@{draw}}
+\index{draw@{draw}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Level\+::draw (\begin{DoxyParamCaption}\item[{float}]{camX,  }\item[{float}]{camY,  }\item[{\mbox{\hyperlink{classolc_1_1PixelGameEngine}{olc\+::\+Pixel\+Game\+Engine}} $\ast$}]{pge }\end{DoxyParamCaption})}
+
+
+
+draw 
+
+This function handles all the calculations necessary to display the relevant portion of the level to the window 
+\begin{DoxyParams}{Parameters}
+{\em camX} & the current X position of the camera \\
+\hline
+{\em camY} & the current Y position of the camera \\
+\hline
+{\em pge} & a pointer to the current Pixel\+Game\+Engine object that allows us to use window-\/related methods \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLevel_a508bd7ea1f273d8e2ba4832e091641eb}\label{classLevel_a508bd7ea1f273d8e2ba4832e091641eb}} 
+\index{Level@{Level}!getFixTiles@{getFixTiles}}
+\index{getFixTiles@{getFixTiles}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getFixTiles()}{getFixTiles()}}
+{\footnotesize\ttfamily bool Level\+::get\+Fix\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Fix\+Tiles 
+
+This function returns a boolean that represents whether the key\+Tiles need to be recalled/replaced back in their default positions \begin{DoxyReturn}{Returns}
+boolean that represents whether key\+Tiles need to be \char`\"{}fixed\char`\"{} and placed back in default positions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a78ab827c2c598cc5e9ae29af6617eee7}\label{classLevel_a78ab827c2c598cc5e9ae29af6617eee7}} 
+\index{Level@{Level}!getLevelHeight@{getLevelHeight}}
+\index{getLevelHeight@{getLevelHeight}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelHeight()}{getLevelHeight()}}
+{\footnotesize\ttfamily int Level\+::get\+Level\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Level\+Height 
+
+This function returns the height of the level (in \# of tiles) \begin{DoxyReturn}{Returns}
+the height of the level (in \# of tiles) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_ae09f6770a79f04dd49aac9b7bebda182}\label{classLevel_ae09f6770a79f04dd49aac9b7bebda182}} 
+\index{Level@{Level}!getLevelMap@{getLevelMap}}
+\index{getLevelMap@{getLevelMap}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelMap()}{getLevelMap()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Level\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Level\+Map 
+
+This function returns the string representation of the level \begin{DoxyReturn}{Returns}
+the string representation of the level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a986cd05306bcdbb9f8e1dbddab258076}\label{classLevel_a986cd05306bcdbb9f8e1dbddab258076}} 
+\index{Level@{Level}!getLevelWidth@{getLevelWidth}}
+\index{getLevelWidth@{getLevelWidth}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelWidth()}{getLevelWidth()}}
+{\footnotesize\ttfamily int Level\+::get\+Level\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Level\+Width 
+
+This function returns the width of the level (in \# of tiles) \begin{DoxyReturn}{Returns}
+the width of the level (in \# of tiles) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a217688b5bc7029059e64e0ef5f8dd7c9}\label{classLevel_a217688b5bc7029059e64e0ef5f8dd7c9}} 
+\index{Level@{Level}!getOffsetX@{getOffsetX}}
+\index{getOffsetX@{getOffsetX}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getOffsetX()}{getOffsetX()}}
+{\footnotesize\ttfamily float Level\+::get\+OffsetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+OffsetX 
+
+This function returns the horizontal offset used to keep the player in the center of view when traversing the level \begin{DoxyReturn}{Returns}
+the horizontal offset value relative to the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a3cde3a4fe10cc5b738f7447473476299}\label{classLevel_a3cde3a4fe10cc5b738f7447473476299}} 
+\index{Level@{Level}!getOffsetY@{getOffsetY}}
+\index{getOffsetY@{getOffsetY}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getOffsetY()}{getOffsetY()}}
+{\footnotesize\ttfamily float Level\+::get\+OffsetY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+OffsetY 
+
+This function returns the vertical offset used to keep the player in the center of view when traversing the level \begin{DoxyReturn}{Returns}
+the vertical offset value relative to the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_aba24be53917b382d91515aa0fec17888}\label{classLevel_aba24be53917b382d91515aa0fec17888}} 
+\index{Level@{Level}!getTile@{getTile}}
+\index{getTile@{getTile}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getTile()}{getTile()}}
+{\footnotesize\ttfamily char Level\+::get\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+get\+Tile 
+
+This function traverses the string representation of the level and returns the corresponding character (or tile) at a given x and y coordinate 
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the desired tile \\
+\hline
+{\em y} & the y coordinate of the desired tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the character (or tile) at the specified x and y coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a13c730666a32c15f358a15c02ff6095b}\label{classLevel_a13c730666a32c15f358a15c02ff6095b}} 
+\index{Level@{Level}!getTileHeight@{getTileHeight}}
+\index{getTileHeight@{getTileHeight}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getTileHeight()}{getTileHeight()}}
+{\footnotesize\ttfamily int Level\+::get\+Tile\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Tile\+Height 
+
+This function returns the height of the tiles (in \# of pixels) \begin{DoxyReturn}{Returns}
+height of each tile (in \# of pixels) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_a0aef4ab972473f6f0cb51955d80aac36}\label{classLevel_a0aef4ab972473f6f0cb51955d80aac36}} 
+\index{Level@{Level}!getTileWidth@{getTileWidth}}
+\index{getTileWidth@{getTileWidth}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getTileWidth()}{getTileWidth()}}
+{\footnotesize\ttfamily int Level\+::get\+Tile\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Tile\+Width 
+
+This function returns the width of the tiles (in \# of pixels) \begin{DoxyReturn}{Returns}
+width of each tile (in \# of pixels) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLevel_af7bd5916c19f6d0d3bfe3b3e6d708cc1}\label{classLevel_af7bd5916c19f6d0d3bfe3b3e6d708cc1}} 
+\index{Level@{Level}!setFixTiles@{setFixTiles}}
+\index{setFixTiles@{setFixTiles}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setFixTiles()}{setFixTiles()}}
+{\footnotesize\ttfamily void Level\+::set\+Fix\+Tiles (\begin{DoxyParamCaption}\item[{bool}]{fix }\end{DoxyParamCaption})}
+
+
+
+set\+Fix\+Tiles 
+
+This function sets the value of the boolean that represents whether the key\+Tiles need to be recalled/replaced back in their default positions 
+\begin{DoxyParams}{Parameters}
+{\em fix} & the boolean value to set whether key\+Tiles need to be recalled/replaced back in their default positions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLevel_a2776fca215adc4f30a786d1f635275a4}\label{classLevel_a2776fca215adc4f30a786d1f635275a4}} 
+\index{Level@{Level}!setTile@{setTile}}
+\index{setTile@{setTile}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setTile()}{setTile()}}
+{\footnotesize\ttfamily void Level\+::set\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+set\+Tile 
+
+This function sets the value of a certain tile in the level at a specified location to a specified value/character 
+\begin{DoxyParams}{Parameters}
+{\em x} & the x coordinate of the tile to be set \\
+\hline
+{\em y} & the y coordinate of the tile to be set \\
+\hline
+{\em c} & the character that the tile will be set to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+level.\+h\item 
+level.\+cpp\end{DoxyCompactItemize}
