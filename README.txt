@@ -12,7 +12,7 @@ Please follow the corresponding prompts and indicate "Y" (Yes) if asked if you'd
 install the respective packages. If you are already up to date, there should be no issues!
 
 
-Now to download the files needed to run the code. Included on Bitbucket are 4 .cpp files, 5 .h files and three folders containing .png files, .txt files and .wav files. Please download all of these files and folders to your local system. 
+Now to download the files needed to run the code. Included on Bitbucket are 4 .cpp files, 5 .h files and three folders (Images, Levels & Music) containing .png files, .txt files and .wav files. Please download all of these files and folders to your local system. 
 
 Depending on where you download these files, you will need to change a few lines
 in the .cpp files to reflect the filepath of the PNG images. Please modify the filepath entries
