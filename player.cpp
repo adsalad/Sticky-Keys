@@ -193,7 +193,7 @@ void Player::death() {
         isDead = false;
         if (!flagPassed) {
             xPos=1;
-            yPos=0;
+            yPos=1;
         }
         else {
             xPos = checkpointX;
@@ -213,7 +213,7 @@ void Player::win(){
         canMoveRight = true;
         canMoveLeft = true;
         xPos = 1;
-        yPos = 0;
+        yPos = 1;
     }
 }
 
@@ -221,13 +221,13 @@ void Player::draw(Level* currentLevel, olc::PixelGameEngine* pge){
     if (!onGround && facingRight){
         pge->DrawPartialSprite((xPos - currentLevel->getOffsetX()) * 16, (yPos - currentLevel->getOffsetY()) * 16, playerJumpRight, 0 * 16, 0 * 16, 1*16, 1*16);
     }
-    if (!onGround && !facingRight){
+    else if (!onGround && !facingRight){
         pge->DrawPartialSprite((xPos - currentLevel->getOffsetX()) * 16, (yPos - currentLevel->getOffsetY()) * 16, playerJumpLeft, 0 * 16, 0 * 16, 1*16, 1*16);
     }
-    if (facingRight){
+    else if (facingRight){
         pge->DrawPartialSprite((xPos - currentLevel->getOffsetX()) * 16, (yPos - currentLevel->getOffsetY()) * 16, playerMoveRight, 0 * 16, 0 * 16, 1*16, 1*16);
     }
-    if(!facingRight){
+    else{
         pge->DrawPartialSprite((xPos - currentLevel->getOffsetX()) * 16, (yPos - currentLevel->getOffsetY()) * 16, playerMoveLeft, 0 * 16, 0 * 16, 1*16, 1*16);
     }
 }

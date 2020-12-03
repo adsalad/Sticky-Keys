@@ -5,13 +5,6 @@
 #include <iostream>
 #include <fstream>
 
-/// The main constructor for the Level class
-///
-/// \param lW   the width of the level being created (# number of tiles)
-/// \param lH   the height of the level being created (# number of tiles)
-/// \param tW   the width of each tile (in pixels)
-/// \param tH   the height of each tile (in pixels)
-/// \param fName the name of the text file that contains the text representation of the level
 Level::Level(int lW, int lH, int tW, int tH, std::string fName) {
     levelWidth = lW;
     levelHeight = lH;
@@ -34,14 +27,10 @@ Level::Level(int lW, int lH, int tW, int tH, std::string fName) {
     upPlacedSprite = new olc::Sprite("/home/jtorreal/CLionProjects/StickyKeys/Images/upPlaced.png");
     fixTiles = false;
 }
-/// Default constructor for Level class (does not get used)
-Level::Level(){}
-/// This functions returns the width of the level (in # of tiles)
-/// \return the width of the level (in # of tiles)
-int Level::getLevelWidth() {return levelWidth;}
 
-/// This functions returns the height of the level (in # of tiles)
-/// \return the height of the level (in # of tiles)
+Level::Level(){}
+
+int Level::getLevelWidth() {return levelWidth;}
 int Level::getLevelHeight() {return levelHeight;}
 int Level::getTileWidth() {return tileWidth;}
 int Level::getTileHeight() {return tileHeight;}
@@ -62,6 +51,7 @@ void Level::setTile(int x, int y, char c) {
     if (x >= 0 && x < levelWidth && y >= 0 && y < levelHeight)
         levelMap[y * levelWidth + x] = c;
 }
+
 void Level::draw(float cameraX, float cameraY, olc::PixelGameEngine* pge) {
     //Draw Level
     int nVisibleTilesX = pge->ScreenWidth() / tileWidth;

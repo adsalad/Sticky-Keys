@@ -1,3 +1,8 @@
+/**
+ * @brief This file acts as an extension to the olcPixelGameEngine, also created by javidx9 (oneLoneCoder) in order to
+ * further provide project creators with the ability to generate sound and play .wav files. Once again, it is used
+ * used in accordance with the OLC-3 License outlined below.
+ */
 /*
 	olcPGEX_Sound.h
 	+-------------------------------------------------------------+

@@ -1,3 +1,10 @@
+/**
+ * @authors Jose Torrealba, Cole Chang, Cameron Railton, Adam Salaymeh
+ * @brief This file/class is a representation of the engine to our StickyKeys game. It is where the player, keyTile and level classes all come together.
+ * One player object, five level objects and three keyTile objects are all created and continuously updated in this class. The three main functions:
+ * OnUserCreate, OnUserUpdate & OnUserDestroy are all inherited from the olcPixelGameEngine header file and determine what code gets run on initial
+ * bootup, continuously throughout the game, and when the window closes, respectively.
+ */
 #define OLC_PGE_APPLICATION
 #define OLC_PGEX_SOUND
 #include "olcPixelGameEngine.h"
@@ -12,6 +19,9 @@
 class StickyKeys : public olc::PixelGameEngine
 {
 public:
+    /**
+     * Default constructor for our GameEngine object
+     */
     StickyKeys()
     {
         sAppName = "Sticky Keys Engine";
@@ -27,7 +37,7 @@ private:
     std::vector<Level> levelList;
 
     Level* currentLevel;
-    Player player = Player(1, 0, 0, 0);
+    Player player = Player(1, 1, 0, 0);
     KeyTile leftTile = KeyTile(20, 50, 'l');
     KeyTile rightTile = KeyTile(leftTile.getXPos()+16+20, 50, 'r');
     KeyTile jumpTile = KeyTile(rightTile.getXPos()+16+20, 50, 'j');
@@ -43,7 +53,10 @@ private:
     int recallSound;
 
 public:
-    //Create initial level and load any Sprites needed at this stage
+    /**
+     * This function runs only once when the window is created. It initializes all of our levels and audio samples to be used later on in the program
+     * @return true to signify this process has been completed
+     */
     bool OnUserCreate() override
     {
         levelCount = 0;
@@ -70,10 +83,19 @@ public:
         return true;
     }
 
+    /**
+     * Called every frame and deals with all processes that require updating every frame or continuous checks such as drawing the player, processing user input, drawing the level and keyTiles, etc.
+     * @param fElapsedTime fElapsedTime a time per frame value meant to be included in certain operations to allow equal performance on all machines
+     * @return true to signify this process has been completed
+     */
     bool OnUserUpdate(float fElapsedTime) override
     {
         if(levelCount == 0){
-            FillRect(0,0,ScreenWidth(), ScreenHeight(), olc::BLUE);
+            FillRect(0,0,ScreenWidth(), ScreenHeight(), olc::DARK_RED);
+            DrawString(45, 75, "Sticky Keys", olc::GREEN, 2);
+            DrawString(55, 130, "Hit 'Enter' to Play", olc::BLACK);
+            DrawString(55, 150, "Hit 'ESC' to Quit", olc::BLACK);
+
             if(GetKey(olc::ENTER).bPressed){
                 levelCount++;
             }
@@ -82,7 +104,8 @@ public:
             }
         }
         else if(levelCount == 6){
-            FillRect(0,0,ScreenWidth(), ScreenHeight(), olc::YELLOW);
+            FillRect(0,0,ScreenWidth(), ScreenHeight(), olc::DARK_RED);
+            DrawString(55, 120, "THE END!", olc::GREEN, 2);
             if(GetKey(olc::ENTER).bPressed || GetKey(olc::ESCAPE).bPressed){
                 exit(0);
             }
@@ -161,6 +184,10 @@ public:
         return true;
     }
 
+    /**
+     * Called once when the window/application is terminated. Allows for any open instances of code such as Audio to be properly shut down
+     * @return true to signify this process has been completed
+     */
     bool OnUserDestroy() override
     {
         olc::SOUND::DestroyAudio();
@@ -168,7 +195,10 @@ public:
     }
 };
 
-
+/**
+ * The main function where we create and run our game engine object
+ * @return 0 to signify that our game has created and ran properly
+ */
 int main()
 {
     StickyKeys demo;

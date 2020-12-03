@@ -1,3 +1,8 @@
+/**
+ * @brief This header file provided by online personality and Youtuber javidx9 (or oneLoneCoder) operates as a graphics and input framework and
+ * proxy to external media layers such as SFML and SDL for this project. It allows us to perform several operations concerning drawing and displaying to
+ * a window. It also allows us to take in user input from both keys and mouse prompts. It is used in accordance with the OLC-3 License outlined below.
+ */
 /*
 	olcPixelGameEngine.h
 
